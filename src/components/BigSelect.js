@@ -10,6 +10,8 @@ const BigSelect = (props) => {
     selected,
     description,
     descriptionLabel,
+    centerLabel,
+    centerLabelSub,
   } = props
   return (
     <div
@@ -18,14 +20,32 @@ const BigSelect = (props) => {
         selected
           ? 'tw-border-2 border-highlight-400'
           : 'tw-border tw-border-light-300'
-      } bg-dark-400 tw-rounded  tw-border-solid  hover:border-highlight-400 tw-p-4`}
+      } ${
+        !!centerLabel && 'tw-h-48 tw-object-fit'
+      } bg-dark-400 tw-rounded  tw-border-solid  hover:border-highlight-400 tw-p-4 tw-relative`}
     >
       <div className="tw-flex tw-justify-center tw-w-full">
         <div className="tw-text-white">{label}</div>
       </div>
-      <div className="tw-flex tw-justify-center tw-w-full">
-        <img alt={label} className="tw-w-40 tw-object-contain" src={imgSrc} />
-      </div>
+      {centerLabel && (
+        <div className="tw-absolute tw-flex tw-justify-center tw-place-items-center tw-h-full tw-w-full tw-top-0 tw-right-0">
+          <div>
+            <div className="tw-text-white tw-text-3xl tw-w-full">
+              {centerLabel}
+            </div>
+            {centerLabelSub && (
+              <div className="tw-text-white tw-text-xs tw-w-full ">
+                {centerLabelSub}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+      {imgSrc && (
+        <div className="tw-flex tw-justify-center tw-w-full">
+          <img alt={label} className="tw-w-40 tw-object-contain" src={imgSrc} />
+        </div>
+      )}
       {descriptionLabel && (
         <div className="tw-flex tw-justify-center tw-w-full">
           <div className="tw-text-white tw-text-xs">{descriptionLabel}</div>

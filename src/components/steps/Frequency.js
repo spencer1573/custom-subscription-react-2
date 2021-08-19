@@ -2,13 +2,14 @@ import React, { Fragment, useContext } from 'react'
 import BigSelect from '../BigSelect'
 // import { string } from 'prop-types';
 import { UserContext } from '../../App.js'
-import { quantities } from '../../constants/constants'
+import { frequencies } from '../../constants/constants'
 
-const Quantity = (props) => {
-  const { selectedQuantityId, setSelectedQuantityId } = useContext(UserContext)
+const Frequency = (props) => {
+  const { selectedFrequencyId, setSelectedFrequencyId } =
+    useContext(UserContext)
 
-  const handleQuantitySelection = (id) => {
-    setSelectedQuantityId(id)
+  const handleFrequencySelection = (id) => {
+    setSelectedFrequencyId(id)
   }
 
   return (
@@ -21,16 +22,15 @@ const Quantity = (props) => {
         </div>
         <div className="tw-flex tw-justify-center tw-w-full">
           <div className="tw-grid tw-gap-x-4 tw-grid-cols-4">
-            {quantities.map((quantity) => (
+            {frequencies.map((frequency) => (
               <BigSelect
-                key={quantity.id}
-                id={quantity.id}
-                selected={quantity.id === selectedQuantityId}
-                handleSelection={(id) => handleQuantitySelection(id)}
-                label={quantity.label}
-                imgSrc={quantity.imgSrc}
-                description={quantity.description}
-                descriptionLabel={quantity.descriptionLabel}
+                key={frequency.id}
+                id={frequency.id}
+                selected={frequency.id === selectedFrequencyId}
+                handleSelection={(id) => handleFrequencySelection(id)}
+                label={frequency.label}
+                centerLabel={frequency.centerLabel}
+                centerLabelSub={frequency.centerLabelSub}
               ></BigSelect>
             ))}
             {/* <BigSelect
@@ -54,4 +54,4 @@ const Quantity = (props) => {
   )
 }
 
-export default Quantity
+export default Frequency

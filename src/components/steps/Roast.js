@@ -3,7 +3,7 @@ import BigSelectTypeTwo from '../BigSelectTypeTwo'
 import { UserContext } from '../../App'
 import { roasts } from '../../constants/constants'
 
-const Texture = (props) => {
+const Roast = (props) => {
   const { selectedTextureId, selectedRoastId, setSelectedRoastId } =
     useContext(UserContext)
 
@@ -64,4 +64,4 @@ const Texture = (props) => {
   )
 }
 
-export default Texture
+export default Roast

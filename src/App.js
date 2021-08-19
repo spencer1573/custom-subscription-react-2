@@ -3,11 +3,17 @@ import React, { useEffect, useState, useMemo } from 'react'
 import Texture from './components/steps/Texture'
 import Roast from './components/steps/Roast'
 import Quantity from './components/steps/Quantity'
+import Frequency from './components/steps/Frequency'
 
 /* SUMMARY OF STEPS */
 import StepsSummary from './components/steps-summary/StepsSummary'
 
-import { textures, roasts, quantities } from './constants/constants'
+import {
+  textures,
+  roasts,
+  quantities,
+  frequencies,
+} from './constants/constants'
 
 export const UserContext = React.createContext()
 
@@ -16,6 +22,7 @@ const App = () => {
   const [selectedTextureId, setSelectedTextureId] = useState(0)
   const [selectedRoastId, setSelectedRoastId] = useState(0)
   const [selectedQuantityId, setSelectedQuantityId] = useState(0)
+  const [selectedFrequencyId, setSelectedFrequencyId] = useState(0)
 
   const [pageId, setPageId] = useState(1)
   const [selectedStepsInfo, setSelectedStepsInfo] = useState({})
@@ -33,6 +40,11 @@ const App = () => {
   const selectedQuantityObject = useMemo(
     () => quantities.find((quantity) => quantity.id === selectedQuantityId),
     [selectedQuantityId]
+  )
+
+  const selectedFrequencyObject = useMemo(
+    () => frequencies.find((frequency) => frequency.id === selectedFrequencyId),
+    [selectedFrequencyId]
   )
 
   // IMPORTANT must change if you adjust summarySteps
@@ -75,7 +87,18 @@ const App = () => {
   }, [selectedQuantityObject])
 
   useEffect(() => {
-    if (selectedTextureId || selectedRoastId || selectedQuantityId) {
+    if (selectedFrequencyObject) {
+      setSelectedStepsInfo({ ...selectedStepsInfo, 4: selectedFrequencyObject })
+    }
+  }, [selectedFrequencyObject])
+
+  useEffect(() => {
+    if (
+      selectedTextureId ||
+      selectedRoastId ||
+      selectedQuantityId ||
+      selectedFrequencyId
+    ) {
       setPageId(currentNextUnselectedPage)
     }
   }, [
@@ -83,6 +106,7 @@ const App = () => {
     selectedTextureId,
     selectedRoastId,
     selectedQuantityId,
+    selectedFrequencyId,
   ])
 
   // useEffect(() => {
@@ -100,6 +124,8 @@ const App = () => {
         setSelectedRoastId,
         selectedQuantityId,
         setSelectedQuantityId,
+        selectedFrequencyId,
+        setSelectedFrequencyId,
         pageId,
         setPageId,
         selectedStepsInfo,
@@ -128,6 +154,7 @@ const App = () => {
             {pageId === 1 && <Texture />}
             {pageId === 2 && <Roast />}
             {pageId === 3 && <Quantity />}
+            {pageId === 4 && <Frequency />}
           </div>
           <StepsSummary />
         </div>

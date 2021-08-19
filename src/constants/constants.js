@@ -184,3 +184,30 @@ export const quantities = [
       '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/subscription-slider_4-bag_400x400.png?v=4968723301670925721',
   },
 ]
+
+export const frequencies = [
+  {
+    id: 1,
+    label: 'SHIPS EVERY 14 DAYS',
+    centerLabel: '14',
+    centerLabelSub: 'DAYS',
+  },
+  {
+    id: 2,
+    label: 'SHIPS EVERY 21 DAYS',
+    centerLabel: '21',
+    centerLabelSub: 'DAYS',
+  },
+  {
+    id: 3,
+    label: 'SHIPS EVERY 30 DAYS',
+    centerLabel: '30',
+    centerLabelSub: 'DAYS',
+  },
+  {
+    id: 4,
+    label: 'SHIPS EVERY 60 DAYS',
+    centerLabel: '60',
+    centerLabelSub: 'DAYS',
+  },
+]
