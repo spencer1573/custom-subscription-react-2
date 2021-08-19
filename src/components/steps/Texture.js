@@ -1,8 +1,11 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useContext } from 'react'
 import BigSelect from '../BigSelect'
 // import { string } from 'prop-types';
+import { UserContext } from '../../App.js'
 
 const Texture = (props) => {
+  const { setSelectedTextureId } = useContext(UserContext)
+
   return (
     <Fragment>
       <div className="tw-w-full">
@@ -25,6 +28,7 @@ const Texture = (props) => {
               label="ROUNDS"
               imgSrc="//cdn.shopify.com/s/files/1/0594/0848/2477/t/3/assets/subscription-slider_rounds_400x400.png?v=1128720733247166019"
             />
+            <button onClick={() => setSelectedTextureId(2)}>set to 2</button>
           </div>
         </div>
       </div>
