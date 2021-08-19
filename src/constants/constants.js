@@ -51,7 +51,7 @@ export const groundRoast = [
 
 export const wholeRoast = [
   {
-    id: 1,
+    id: 4,
     label: 'GUNSHIP',
     subLabel: 'LIGHT',
     description:
@@ -60,7 +60,7 @@ export const wholeRoast = [
       '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/GUNSHIP_BAG_UPDATE-1200.png?v=6516688591982501407',
   },
   {
-    id: 2,
+    id: 5,
     label: 'SPACE BEAR',
     subLabel: 'LIGHT',
     description:
@@ -69,7 +69,7 @@ export const wholeRoast = [
       '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/space_bear_1024x1024@2x.png?v=14534080239009770454',
   },
   {
-    id: 3,
+    id: 6,
     label: 'LAVA PANTHER',
     subLabel: 'MEDIUM',
     description:
@@ -81,28 +81,31 @@ export const wholeRoast = [
 
 export const roundsRoast = [
   {
-    id: 1,
+    id: 7,
     label: 'SILENCER SMOOTH',
     subLabel: 'LIGHT',
     description:
       "Silencer Smooth's precise roasting specifications bring out its sweet aroma, citrus notes, and a crisp finish.",
-    imgSrc: '',
+    imgSrc:
+      '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/SS_BLEND_GROUP.png?v=7339731133813771079',
   },
   {
-    id: 2,
+    id: 8,
     label: 'HAZELNUT FLAVORED ROUNDS',
     subLabel: 'MEDIUM',
     description:
       'Our delicious Hazelnut-Flavored Coffee is perfect for those who want just a taste of sweetness with their brew.',
-    imgSrc: '',
+    imgSrc:
+      '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/12CT_HAZELNUT_ROUNDS.png?v=11276618615006838150',
   },
   {
-    id: 3,
+    id: 9,
     label: 'CHOCOLATE FLAVORED ROUNDS',
     subLabel: 'MEDIUM',
     description:
       'We’ve decided to release delicious chocolate-flavored coffee rounds. These rounds are based on our classic Just Black Coffee Roast, with a little extra sweetness.',
-    imgSrc: '',
+    imgSrc:
+      '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/CHOCOLATE_12CT.png?v=9807210036573959527',
   },
 ]
 
