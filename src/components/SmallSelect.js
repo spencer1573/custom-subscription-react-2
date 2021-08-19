@@ -5,7 +5,7 @@ import { string } from 'prop-types'
 const SmallSelect = (props) => {
   const { initImgSrc, label, centerLabel } = props
   return (
-    <div class="tw-h-full">
+    <div className="tw-h-full">
       <div className="tw-h-full tw-relative bg-dark-400 tw-rounded tw-border tw-border-solid tw-border-light-300 hover:border-highlight-400 ">
         <div className="tw-flex tw-justify-center tw-place-items-center tw-w-full tw-h-full">
           <img
@@ -14,8 +14,8 @@ const SmallSelect = (props) => {
             src={initImgSrc}
           />
         </div>
-        <div class="tw-absolute tw-top-0 tw-left-0 tw-w-full tw-h-full tw-flex tw-justify-center tw-place-items-center tw-text-white">
-          <div>{centerLabel}</div>
+        <div className="tw-absolute tw-top-0 tw-left-0 tw-w-full tw-h-full tw-flex tw-justify-center tw-place-items-center tw-text-white">
+          <div className="tw-text-3xl tw-text-white">{centerLabel}</div>
         </div>
       </div>
       <div className="tw-flex tw-justify-center tw-w-full">

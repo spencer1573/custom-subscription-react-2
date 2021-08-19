@@ -37,18 +37,6 @@ const StepsSummary = (props) => {
             </div>
           </div>
         </div>
-        {/* <div className="tw-grid tw-gap-x-4 tw-grid-cols-2">
-            <img
-              alt="Chevron or Arrow Left"
-              className="tw-text-white"
-              src="//cdn.shopify.com/s/files/1/0594/0848/2477/t/3/assets/chevron_left_white_24dp.svg?v=5235765449716174328"
-            />
-            <img
-              alt="Chevron or Arrow Right"
-              className="tw-text-white"
-              src="//cdn.shopify.com/s/files/1/0594/0848/2477/t/3/assets/chevron_right_white_24dp.svg?v=3352481093988545584"
-            />
-          </div> */}
       </div>
     </div>
   )
