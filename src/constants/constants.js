@@ -19,12 +19,92 @@ export const texture = [
   },
 ]
 
-// export const groundCoffees = [
-//   {
-//     id: 1,
-//     label: ''
-//   }
-// ]
+export const groundRoast = [
+  {
+    id: 1,
+    label: 'GUNSHIP',
+    subLabel: 'LIGHT',
+    description:
+      'Featuring a floral aroma, light caramel tasting notes, and a smooth finish.',
+    imgSrc:
+      '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/GUNSHIP_BAG_UPDATE-1200.png?v=6516688591982501407',
+  },
+  {
+    id: 2,
+    label: 'SPACE BEAR',
+    subLabel: 'LIGHT',
+    description:
+      'Known for his courageous legacy exploring the final frontier, he’s returning to gravity to harness the power of pour over coffee.',
+    imgSrc:
+      '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/space_bear_1024x1024@2x.png?v=14534080239009770454',
+  },
+  {
+    id: 3,
+    label: 'LAVA PANTHER',
+    subLabel: 'MEDIUM',
+    description:
+      'Chase the ultimate wave with this 100% Guatemalan Arabica, roasted by our team of experts to bring out its delicious notes of maple, blood orange, and almond.',
+    imgSrc:
+      '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/lava_panther_540x.png?v=12436704304646100494',
+  },
+]
+
+export const wholeRoast = [
+  {
+    id: 1,
+    label: 'GUNSHIP',
+    subLabel: 'LIGHT',
+    description:
+      'Featuring a floral aroma, light caramel tasting notes, and a smooth finish.',
+    imgSrc:
+      '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/GUNSHIP_BAG_UPDATE-1200.png?v=6516688591982501407',
+  },
+  {
+    id: 2,
+    label: 'SPACE BEAR',
+    subLabel: 'LIGHT',
+    description:
+      'Known for his courageous legacy exploring the final frontier, he’s returning to gravity to harness the power of pour over coffee.',
+    imgSrc:
+      '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/space_bear_1024x1024@2x.png?v=14534080239009770454',
+  },
+  {
+    id: 3,
+    label: 'LAVA PANTHER',
+    subLabel: 'MEDIUM',
+    description:
+      'Chase the ultimate wave with this 100% Guatemalan Arabica, roasted by our team of experts to bring out its delicious notes of maple, blood orange, and almond.',
+    imgSrc:
+      '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/lava_panther_540x.png?v=12436704304646100494',
+  },
+]
+
+export const roundsRoast = [
+  {
+    id: 1,
+    label: 'SILENCER SMOOTH',
+    subLabel: 'LIGHT',
+    description:
+      "Silencer Smooth's precise roasting specifications bring out its sweet aroma, citrus notes, and a crisp finish.",
+    imgSrc: '',
+  },
+  {
+    id: 2,
+    label: 'HAZELNUT FLAVORED ROUNDS',
+    subLabel: 'MEDIUM',
+    description:
+      'Our delicious Hazelnut-Flavored Coffee is perfect for those who want just a taste of sweetness with their brew.',
+    imgSrc: '',
+  },
+  {
+    id: 3,
+    label: 'CHOCOLATE FLAVORED ROUNDS',
+    subLabel: 'MEDIUM',
+    description:
+      'We’ve decided to release delicious chocolate-flavored coffee rounds. These rounds are based on our classic Just Black Coffee Roast, with a little extra sweetness.',
+    imgSrc: '',
+  },
+]
 
 export const summarySteps = [
   {
@@ -69,9 +149,6 @@ export const summarySteps = [
 //     <img class="w-40 object-contain" src="//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/coffeeClubSignUp_step5_200x200.png?v=6894272251298571702" >
 //     <img class="w-40 object-contain" src="//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/coffeeClubSignUp_step6_200x200.png?v=3796666373239231893" >
 
-//     <img class="w-40 object-contain" src="//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/GUNSHIP_BAG_UPDATE-1200.png?v=6516688591982501407" >
-//     <img class="w-40 object-contain" src="//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/lava_panther_540x.png?v=12436704304646100494" >
-//     <img class="w-40 object-contain" src="//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/space_bear_1024x1024@2x.png?v=14534080239009770454" >
 //     <img class="w-40 object-contain" src="//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/subscription-slider_1-bag_400x400.png?v=9099848038866881308" >
 //     <img class="w-40 object-contain" src="//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/subscription-slider_2-bag_400x400.png?v=4106248448494023126" >
 //     <img class="w-40 object-contain" src="//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/subscription-slider_3-bag_400x400.png?v=10576128729452119620" >
