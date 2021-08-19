@@ -143,7 +143,7 @@ export const summarySteps = [
   },
   {
     id: 5,
-    label: 'FREQUENCY',
+    label: 'REVIEW',
     centerLabel: '05',
     initImgSrc:
       '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/coffeeClubSignUp_step6_200x200.png?v=3796666373239231893',

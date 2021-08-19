@@ -15,8 +15,11 @@ const Quantity = (props) => {
     <Fragment>
       <div className="tw-w-full">
         <div className="tw-flex tw-justify-center tw-w-full">
-          <div className="text-highlight-500 tw-py-4">
-            SELECT COFFEE TEXTURE
+          <div className="text-highlight-500 tw-pt-4">SELECT HOW MANY BAGS</div>
+        </div>
+        <div className="tw-flex tw-justify-center tw-w-full">
+          <div className="tw-text-white tw-text-sm tw-pb-4">
+            12 OZ OF COFEE PER BAG
           </div>
         </div>
         <div className="tw-flex tw-justify-center tw-w-full">

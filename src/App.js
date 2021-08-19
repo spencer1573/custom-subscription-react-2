@@ -4,6 +4,7 @@ import Texture from './components/steps/Texture'
 import Roast from './components/steps/Roast'
 import Quantity from './components/steps/Quantity'
 import Frequency from './components/steps/Frequency'
+import Review from './components/steps/Review'
 
 /* SUMMARY OF STEPS */
 import StepsSummary from './components/steps-summary/StepsSummary'
@@ -155,8 +156,9 @@ const App = () => {
             {pageId === 2 && <Roast />}
             {pageId === 3 && <Quantity />}
             {pageId === 4 && <Frequency />}
+            {pageId === 5 && <Review />}
           </div>
-          <StepsSummary />
+          {pageId !== 5 && <StepsSummary />}
         </div>
       </div>
     </UserContext.Provider>

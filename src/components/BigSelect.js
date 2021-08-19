@@ -12,6 +12,7 @@ const BigSelect = (props) => {
     descriptionLabel,
     centerLabel,
     centerLabelSub,
+    setToFortyEight,
   } = props
   return (
     <div
@@ -21,7 +22,7 @@ const BigSelect = (props) => {
           ? 'tw-border-2 border-highlight-400'
           : 'tw-border tw-border-light-300'
       } ${
-        !!centerLabel && 'tw-h-48 tw-object-fit'
+        !!setToFortyEight && 'tw-h-48 tw-object-fit'
       } bg-dark-400 tw-rounded  tw-border-solid  hover:border-highlight-400 tw-p-4 tw-relative`}
     >
       <div className="tw-flex tw-justify-center tw-w-full">

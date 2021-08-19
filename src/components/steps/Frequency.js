@@ -17,13 +17,14 @@ const Frequency = (props) => {
       <div className="tw-w-full">
         <div className="tw-flex tw-justify-center tw-w-full">
           <div className="text-highlight-500 tw-py-4">
-            SELECT COFFEE TEXTURE
+            SELECT DELIVERY FREQUENCY
           </div>
         </div>
         <div className="tw-flex tw-justify-center tw-w-full">
           <div className="tw-grid tw-gap-x-4 tw-grid-cols-4">
             {frequencies.map((frequency) => (
               <BigSelect
+                setToFortyEight
                 key={frequency.id}
                 id={frequency.id}
                 selected={frequency.id === selectedFrequencyId}
