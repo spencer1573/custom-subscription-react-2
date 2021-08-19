@@ -2,3 +2,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* BACKGROUND COLORS */
+#csw .bg-dark-700 {
+  background-color: #1b1b1b;
+}
+
+#csw .bg-dark-900 {
+  background-color: #0b0b0b;
+}
+
+#csw .bg-dark-400 {
+  background-color: #363636;
+}
+
+/* TEXT COLORS */
+
+#csw .text-highlight-500 {
+  color: #ffb711;
+}
+
+/* BORDER THINGS */
+/*
+ #csw .border-solid {
+   border-style: solid;
+ }
+*/
+
+#csw .border-light-300 {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+#csw .border-highlight-400 {
+  border-color: #ffb711;
+}
+
+#csw .hover\:border-highlight-400:hover {
+  border-color: #ffb711;
+}
