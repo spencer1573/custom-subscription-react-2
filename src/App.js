@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 /* STEPS (SELECTING) */
 import Texture from './components/steps/Texture'
 
@@ -8,8 +8,14 @@ import StepsSummary from './components/steps-summary/StepsSummary'
 export const UserContext = React.createContext()
 
 const App = () => {
+  const [selectedTextureId, setSelectedTextureId] = useState(1)
+
+  useEffect(() => {
+    console.log('selected texture id ', selectedTextureId)
+  })
+
   return (
-    <UserContext.Provider value="Reed">
+    <UserContext.Provider value={{ selectedTextureId, setSelectedTextureId }}>
       <div id="csw">
         {/* <div className="tw-w-full h-min-64 bg-dark-700 tw-pt-4 tw-pb-8"> */}
         <div className="tw-w-full h-min-64 bg-dark-700 tw-pt-4 tw-pb-32">
