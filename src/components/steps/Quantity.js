@@ -2,13 +2,13 @@ import React, { Fragment, useContext } from 'react'
 import BigSelect from '../BigSelect'
 // import { string } from 'prop-types';
 import { UserContext } from '../../App.js'
-import { textures } from '../../constants/constants'
+import { quantities } from '../../constants/constants'
 
 const Texture = (props) => {
-  const { setSelectedTextureId, selectedTextureId } = useContext(UserContext)
+  const { selectedQuantityId, setSelectedQuantityId } = useContext(UserContext)
 
-  const handleTextureSelection = (id) => {
-    setSelectedTextureId(id)
+  const handleQuantitySelection = (id) => {
+    setSelectedQuantityId(id)
   }
 
   return (
@@ -20,15 +20,17 @@ const Texture = (props) => {
           </div>
         </div>
         <div className="tw-flex tw-justify-center tw-w-full">
-          <div className="tw-grid tw-gap-x-4 tw-grid-cols-3">
-            {textures.map((texture) => (
+          <div className="tw-grid tw-gap-x-4 tw-grid-cols-4">
+            {quantities.map((quantity) => (
               <BigSelect
-                key={texture.id}
-                id={texture.id}
-                selected={texture.id === selectedTextureId}
-                handleSelection={(id) => handleTextureSelection(id)}
-                label={texture.label}
-                imgSrc={texture.imgSrc}
+                key={quantity.id}
+                id={quantity.id}
+                selected={quantity.id === selectedQuantityId}
+                handleSelection={(id) => handleQuantitySelection(id)}
+                label={quantity.label}
+                imgSrc={quantity.imgSrc}
+                description={quantity.description}
+                descriptionLabel={quantity.descriptionLabel}
               ></BigSelect>
             ))}
             {/* <BigSelect

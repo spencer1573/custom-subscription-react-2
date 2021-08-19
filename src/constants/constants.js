@@ -1,4 +1,4 @@
-export const texture = [
+export const textures = [
   {
     id: 1,
     label: 'GROUND',
@@ -19,9 +19,10 @@ export const texture = [
   },
 ]
 
-export const groundRoast = [
+export const roasts = [
   {
     id: 1,
+    type: 'ground-roast',
     label: 'GUNSHIP',
     subLabel: 'LIGHT',
     description:
@@ -31,6 +32,7 @@ export const groundRoast = [
   },
   {
     id: 2,
+    type: 'ground-roast',
     label: 'SPACE BEAR',
     subLabel: 'LIGHT',
     description:
@@ -40,6 +42,7 @@ export const groundRoast = [
   },
   {
     id: 3,
+    type: 'ground-roast',
     label: 'LAVA PANTHER',
     subLabel: 'MEDIUM',
     description:
@@ -47,11 +50,9 @@ export const groundRoast = [
     imgSrc:
       '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/lava_panther_540x.png?v=12436704304646100494',
   },
-]
-
-export const wholeRoast = [
   {
     id: 4,
+    type: 'whole-roast',
     label: 'GUNSHIP',
     subLabel: 'LIGHT',
     description:
@@ -61,6 +62,7 @@ export const wholeRoast = [
   },
   {
     id: 5,
+    type: 'whole-roast',
     label: 'SPACE BEAR',
     subLabel: 'LIGHT',
     description:
@@ -70,6 +72,7 @@ export const wholeRoast = [
   },
   {
     id: 6,
+    type: 'whole-roast',
     label: 'LAVA PANTHER',
     subLabel: 'MEDIUM',
     description:
@@ -77,11 +80,9 @@ export const wholeRoast = [
     imgSrc:
       '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/lava_panther_540x.png?v=12436704304646100494',
   },
-]
-
-export const roundsRoast = [
   {
     id: 7,
+    type: 'rounds-roast',
     label: 'SILENCER SMOOTH',
     subLabel: 'LIGHT',
     description:
@@ -91,6 +92,7 @@ export const roundsRoast = [
   },
   {
     id: 8,
+    type: 'rounds-roast',
     label: 'HAZELNUT FLAVORED ROUNDS',
     subLabel: 'MEDIUM',
     description:
@@ -100,6 +102,7 @@ export const roundsRoast = [
   },
   {
     id: 9,
+    type: 'rounds-roast',
     label: 'CHOCOLATE FLAVORED ROUNDS',
     subLabel: 'MEDIUM',
     description:
@@ -147,12 +150,37 @@ export const summarySteps = [
   },
 ]
 
-// images to hook up
-//     <img class="w-40 object-contain" src="//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/coffeeClubSignUp_step4_200x200.png?v=10610913660879988772" >
-//     <img class="w-40 object-contain" src="//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/coffeeClubSignUp_step5_200x200.png?v=6894272251298571702" >
-//     <img class="w-40 object-contain" src="//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/coffeeClubSignUp_step6_200x200.png?v=3796666373239231893" >
-
-//     <img class="w-40 object-contain" src="//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/subscription-slider_1-bag_400x400.png?v=9099848038866881308" >
-//     <img class="w-40 object-contain" src="//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/subscription-slider_2-bag_400x400.png?v=4106248448494023126" >
-//     <img class="w-40 object-contain" src="//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/subscription-slider_3-bag_400x400.png?v=10576128729452119620" >
-//     <img class="w-40 object-contain" src="//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/subscription-slider_4-bag_400x400.png?v=4968723301670925721" ></img>
+export const quantities = [
+  {
+    id: 1,
+    label: '1 BAG',
+    descriptionLabel: '12 oz.',
+    description: 'About 30 cups per shipment.',
+    imgSrc:
+      '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/subscription-slider_1-bag_400x400.png?v=9099848038866881308',
+  },
+  {
+    id: 2,
+    label: '2 BAG',
+    descriptionLabel: '24 oz.',
+    description: 'About 60 cups per shipment.',
+    imgSrc:
+      '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/subscription-slider_2-bag_400x400.png?v=4106248448494023126',
+  },
+  {
+    id: 3,
+    label: '3 BAG',
+    descriptionLabel: '36 oz.',
+    description: 'About 90 cups per shipment.',
+    imgSrc:
+      '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/subscription-slider_3-bag_400x400.png?v=10576128729452119620',
+  },
+  {
+    id: 4,
+    label: '4 BAG',
+    descriptionLabel: '48 oz.',
+    description: 'About 120 cups per shipment.',
+    imgSrc:
+      '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/subscription-slider_4-bag_400x400.png?v=4968723301670925721',
+  },
+]
