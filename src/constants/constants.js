@@ -201,24 +201,28 @@ export const quantities = [
 export const frequencies = [
   {
     id: 1,
+    value: 582025389, // 14 day code for narwal
     label: 'SHIPS EVERY 14 DAYS',
     centerLabel: '14',
     centerLabelSub: 'DAYS',
   },
   {
     id: 2,
+    value: 582058157, // 21 day code for narwal
     label: 'SHIPS EVERY 21 DAYS',
     centerLabel: '21',
     centerLabelSub: 'DAYS',
   },
   {
     id: 3,
+    value: 582090925, // 30 day code for narwal
     label: 'SHIPS EVERY 30 DAYS',
     centerLabel: '30',
     centerLabelSub: 'DAYS',
   },
   {
     id: 4,
+    value: 582123693, // 60 day code for narwal
     label: 'SHIPS EVERY 60 DAYS',
     centerLabel: '60',
     centerLabelSub: 'DAYS',
