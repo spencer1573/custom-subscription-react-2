@@ -30,13 +30,12 @@ const Review = (props) => {
   const addSubscriptionToCart = async () => {
     const quantityValue = quantity.value
     const roastValue = roast.value
-
-    console.log('qauntity value ', quantityValue)
+    const frequencyValue = frequency.value
 
     const data = {
       id: roastValue,
       quantity: quantityValue,
-      selling_plan: 571506861,
+      selling_plan: frequencyValue,
     }
 
     $.ajax({
