@@ -22,6 +22,7 @@ export const textures = [
 export const roasts = [
   {
     id: 1,
+    value: 40550338330797, // actual variant in narwal
     type: 'ground-roast',
     label: 'GUNSHIP',
     subLabel: 'LIGHT',
@@ -32,6 +33,7 @@ export const roasts = [
   },
   {
     id: 2,
+    value: 40550338330797, // need to make real (gunship ground roast in narwal value)
     type: 'ground-roast',
     label: 'SPACE BEAR',
     subLabel: 'LIGHT',
@@ -42,6 +44,7 @@ export const roasts = [
   },
   {
     id: 3,
+    value: 40550338330797, // need to make real (gunship ground roast in narwal value)
     type: 'ground-roast',
     label: 'LAVA PANTHER',
     subLabel: 'MEDIUM',
@@ -52,6 +55,7 @@ export const roasts = [
   },
   {
     id: 4,
+    value: 40550338363565, // actual variant in narwal
     type: 'whole-roast',
     label: 'GUNSHIP',
     subLabel: 'LIGHT',
@@ -62,6 +66,7 @@ export const roasts = [
   },
   {
     id: 5,
+    value: 40550338330797, // need to make real (gunship ground roast in narwal value)
     type: 'whole-roast',
     label: 'SPACE BEAR',
     subLabel: 'LIGHT',
@@ -72,6 +77,7 @@ export const roasts = [
   },
   {
     id: 6,
+    value: 40550338330797, // need to make real (gunship ground roast in narwal value)
     type: 'whole-roast',
     label: 'LAVA PANTHER',
     subLabel: 'MEDIUM',
@@ -82,6 +88,7 @@ export const roasts = [
   },
   {
     id: 7,
+    value: 40550338330797, // need to make real (gunship ground roast in narwal value)
     type: 'rounds-roast',
     label: 'SILENCER SMOOTH',
     subLabel: 'LIGHT',
@@ -92,6 +99,7 @@ export const roasts = [
   },
   {
     id: 8,
+    value: 40550338330797, // need to make real (gunship ground roast in narwal value)
     type: 'rounds-roast',
     label: 'HAZELNUT FLAVORED ROUNDS',
     subLabel: 'MEDIUM',
@@ -102,6 +110,7 @@ export const roasts = [
   },
   {
     id: 9,
+    value: 40550338330797, // need to make real (gunship ground roast in narwal value)
     type: 'rounds-roast',
     label: 'CHOCOLATE FLAVORED ROUNDS',
     subLabel: 'MEDIUM',
@@ -153,6 +162,7 @@ export const summarySteps = [
 export const quantities = [
   {
     id: 1,
+    value: 1,
     label: '1 BAG',
     descriptionLabel: '12 oz.',
     description: 'About 30 cups per shipment.',
@@ -161,6 +171,7 @@ export const quantities = [
   },
   {
     id: 2,
+    value: 2,
     label: '2 BAG',
     descriptionLabel: '24 oz.',
     description: 'About 60 cups per shipment.',
@@ -169,6 +180,7 @@ export const quantities = [
   },
   {
     id: 3,
+    value: 3,
     label: '3 BAG',
     descriptionLabel: '36 oz.',
     description: 'About 90 cups per shipment.',
@@ -177,6 +189,7 @@ export const quantities = [
   },
   {
     id: 4,
+    value: 4,
     label: '4 BAG',
     descriptionLabel: '48 oz.',
     description: 'About 120 cups per shipment.',
