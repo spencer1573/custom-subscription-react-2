@@ -1,3 +1,47 @@
+// all images to hook up when you find another cdn
+
+// 12CT_HAZELNUT_ROUNDS.png
+// Blank_Bag_Ground_V2_400x400.png
+// Blank_Bag_Whole_Bean_V1_400x400.png
+// chevron_left_white_24dp.svg
+// chevron_right_white_24dp.svg
+// CHOCOLATE_12CT.png
+// coffeeClubSignUp_step2_200x200.png
+// coffeeClubSignUp_step3_200x200.png
+// coffeeClubSignUp_step4_200x200.png
+// coffeeClubSignUp_step5_200x200.png
+// coffeeClubSignUp_step6_200x200.png
+// GUNSHIP_BAG_UPDATE-1200.png
+// lava_panther_540x.png
+// space_bear_1024x1024@2x.png
+// SS_BLEND_GROUP.png
+// subscription-slider_1-bag_400x400.png
+// subscription-slider_2-bag_400x400.png
+// subscription-slider_3-bag_400x400.png
+// subscription-slider_4-bag_400x400.png
+// subscription-slider_rounds_400x400.png
+
+// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/12CT_HAZELNUT_ROUNDS.png
+// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/Blank_Bag_Ground_V2_400x400.png
+// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/Blank_Bag_Whole_Bean_V1_400x400.png
+// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/chevron_left_white_24dp.svg
+// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/chevron_right_white_24dp.svg
+// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/CHOCOLATE_12CT.png
+// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/coffeeClubSignUp_step2_200x200.png
+// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/coffeeClubSignUp_step3_200x200.png
+// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/coffeeClubSignUp_step4_200x200.png
+// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/coffeeClubSignUp_step5_200x200.png
+// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/coffeeClubSignUp_step6_200x200.png
+// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/GUNSHIP_BAG_UPDATE-1200.png
+// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/lava_panther_540x.png
+// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/space_bear_1024x1024@2x.png
+// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/SS_BLEND_GROUP.png
+// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/subscription-slider_1-bag_400x400.png
+// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/subscription-slider_2-bag_400x400.png
+// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/subscription-slider_3-bag_400x400.png
+// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/subscription-slider_4-bag_400x400.png
+// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/subscription-slider_rounds_400x400.png
+
 export const textures = [
   {
     id: 1,
