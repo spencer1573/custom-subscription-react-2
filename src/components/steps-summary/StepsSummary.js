@@ -3,7 +3,10 @@ import React, { useContext } from 'react'
 import SmallSelect from '../SmallSelect'
 import { summarySteps } from '../../constants/constants'
 import { UserContext } from '../../App'
-import { chevronRightImgSrc, chevronLeftImgSrc } from './constants/constants'
+import {
+  chevronRightImgSrc,
+  chevronLeftImgSrc,
+} from '../../constants/constants'
 
 const StepsSummary = (props) => {
   const { selectedStepsInfo, setSelectedTextureId } = useContext(UserContext)
