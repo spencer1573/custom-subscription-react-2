@@ -10,8 +10,10 @@ const BigSelect = (props) => {
     handleSelection,
     id,
     selected,
+    isCarousel,
   } = props
 
+  // isCarousel ? 'tw-w-full tw-h-full' : 'tw-w-64 tw-object-contain'
   return (
     <div
       onClick={() => handleSelection(id)}
@@ -19,9 +21,11 @@ const BigSelect = (props) => {
         selected
           ? 'tw-border-2 border-highlight-400'
           : 'tw-border tw-border-light-300'
-      } bg-dark-400 tw-w-64 tw-object-contain tw-rounded tw-border-solid  hover:border-highlight-400 tw-p-4`}
+      } ${
+        isCarousel ? 'tw-w-64 tw-h-full' : 'tw-flex tw-place-items-center'
+      }  bg-dark-400 bg-red-200  tw-rounded tw-border-solid  hover:border-highlight-400 tw-p-4`}
     >
-      <div className="tw-flex tw-justify-center tw-w-full">
+      <div className="tw-flex tw-justify-center tw-w-full bg-red-200">
         <div className="tw-text-white">{label}</div>
       </div>
       <div className="tw-flex tw-justify-center tw-w-full">

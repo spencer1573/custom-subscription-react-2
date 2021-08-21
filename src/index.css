@@ -40,3 +40,14 @@
 #csw .hover\:border-highlight-400:hover {
   border-color: #ffb711;
 }
+
+/* scrollbar hide */
+.scrollbar-hide {
+  /* Firefox */
+  scrollbar-width: none;
+  /* safari and chrome */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: 'none';
+}

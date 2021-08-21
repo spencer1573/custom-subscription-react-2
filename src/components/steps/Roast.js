@@ -23,6 +23,9 @@ const Roast = (props) => {
     })
   }
 
+  //TODO adjust later for testing
+  filteredRoasts = roasts
+
   const handleSelectedRoastId = (roastId) => {
     console.log('roast id ', roastId)
     setSelectedRoastId(roastId)
@@ -35,18 +38,22 @@ const Roast = (props) => {
           <div className="text-highlight-500 tw-py-4">SELECT YOUR ROAST</div>
         </div>
         <div className="tw-flex tw-justify-center tw-w-full">
-          <div className="tw-grid tw-gap-x-4 tw-grid-cols-3">
+          {/* <div className="tw-grid tw-gap-x-4 tw-grid-cols-3"> */}
+          <div className="tw-flex tw-justify-between tw-space-x-4 tw-overflow-scroll tw-max-w-xl scrollbar-hide">
             {filteredRoasts.map((roast) => (
-              <BigSelectTypeTwo
-                id={roast.id}
-                key={roast.id}
-                label={roast.label}
-                handleSelection={(roastId) => handleSelectedRoastId(roastId)}
-                selected={roast.id === selectedRoastId}
-                subLabel={roast.subLabel}
-                description={roast.description}
-                imgSrc={roast.imgSrc}
-              />
+              <div className="tw-w-64">
+                <BigSelectTypeTwo
+                  isCarousel
+                  id={roast.id}
+                  key={roast.id}
+                  label={roast.label}
+                  handleSelection={(roastId) => handleSelectedRoastId(roastId)}
+                  selected={roast.id === selectedRoastId}
+                  subLabel={roast.subLabel}
+                  description={roast.description}
+                  imgSrc={roast.imgSrc}
+                />
+              </div>
             ))}
             {/* TODO #rm */}
             {/* <BigSelect
