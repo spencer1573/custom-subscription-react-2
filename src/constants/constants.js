@@ -22,8 +22,7 @@
 // subscription-slider_rounds_400x400.png
 
 // https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/12CT_HAZELNUT_ROUNDS.png
-// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/Blank_Bag_Ground_V2_400x400.png
-// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/Blank_Bag_Whole_Bean_V1_400x400.png
+
 // https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/chevron_left_white_24dp.svg
 // https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/chevron_right_white_24dp.svg
 // https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/CHOCOLATE_12CT.png
@@ -47,13 +46,13 @@ export const textures = [
     id: 1,
     label: 'GROUND',
     imgSrc:
-      '//cdn.shopify.com/s/files/1/0594/0848/2477/t/3/assets/Blank_Bag_Ground_V2_400x400.png?v=2151126767448975124',
+      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/Blank_Bag_Ground_V2_400x400.png',
   },
   {
     id: 2,
     label: 'WHOLE BEAN',
     imgSrc:
-      '//cdn.shopify.com/s/files/1/0594/0848/2477/t/3/assets/Blank_Bag_Whole_Bean_V1_400x400.png?v=7523416550851258749',
+      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/Blank_Bag_Whole_Bean_V1_400x400.png',
   },
   {
     id: 3,
