@@ -14,6 +14,8 @@ import {
   roasts,
   quantities,
   frequencies,
+  chevronRightImgSrc,
+  chevronLeftImgSrc,
 } from './constants/constants'
 
 export const UserContext = React.createContext()
@@ -140,7 +142,7 @@ const App = () => {
             <img
               alt="Chevron or Arrow Left"
               className="tw-text-white"
-              src="//cdn.shopify.com/s/files/1/0594/0848/2477/t/3/assets/chevron_left_white_24dp.svg?v=5235765449716174328"
+              src={chevronLeftImgSrc}
             />
             <div className="tw-text-white">
               STEP {pageId} / {lastStepPageId}
@@ -148,7 +150,7 @@ const App = () => {
             <img
               alt="Chevron or Arrow Right"
               className="tw-text-white"
-              src="//cdn.shopify.com/s/files/1/0594/0848/2477/t/3/assets/chevron_right_white_24dp.svg?v=3352481093988545584"
+              src={chevronRightImgSrc}
             />
           </div>
           <div className="tw-mb-8">

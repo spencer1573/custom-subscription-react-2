@@ -3,6 +3,7 @@ import React, { useContext } from 'react'
 import SmallSelect from '../SmallSelect'
 import { summarySteps } from '../../constants/constants'
 import { UserContext } from '../../App'
+import { chevronRightImgSrc, chevronLeftImgSrc } from './constants/constants'
 
 const StepsSummary = (props) => {
   const { selectedStepsInfo, setSelectedTextureId } = useContext(UserContext)
@@ -28,12 +29,12 @@ const StepsSummary = (props) => {
               <img
                 alt="Chevron or Arrow Left"
                 className="tw-text-white"
-                src="//cdn.shopify.com/s/files/1/0594/0848/2477/t/3/assets/chevron_left_white_24dp.svg?v=5235765449716174328"
+                src={chevronLeftImgSrc}
               />
               <img
                 alt="Chevron or Arrow Right"
                 className="tw-text-white"
-                src="//cdn.shopify.com/s/files/1/0594/0848/2477/t/3/assets/chevron_right_white_24dp.svg?v=3352481093988545584"
+                src={chevronRightImgSrc}
               />
             </div>
           </div>

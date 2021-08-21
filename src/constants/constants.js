@@ -21,26 +21,6 @@
 // subscription-slider_4-bag_400x400.png
 // subscription-slider_rounds_400x400.png
 
-// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/12CT_HAZELNUT_ROUNDS.png
-
-// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/chevron_left_white_24dp.svg
-// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/chevron_right_white_24dp.svg
-// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/CHOCOLATE_12CT.png
-// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/coffeeClubSignUp_step2_200x200.png
-// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/coffeeClubSignUp_step3_200x200.png
-// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/coffeeClubSignUp_step4_200x200.png
-// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/coffeeClubSignUp_step5_200x200.png
-// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/coffeeClubSignUp_step6_200x200.png
-// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/GUNSHIP_BAG_UPDATE-1200.png
-// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/lava_panther_540x.png
-// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/space_bear_1024x1024@2x.png
-// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/SS_BLEND_GROUP.png
-// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/subscription-slider_1-bag_400x400.png
-// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/subscription-slider_2-bag_400x400.png
-// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/subscription-slider_3-bag_400x400.png
-// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/subscription-slider_4-bag_400x400.png
-// https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/subscription-slider_rounds_400x400.png
-
 export const textures = [
   {
     id: 1,
@@ -58,7 +38,7 @@ export const textures = [
     id: 3,
     label: 'ROUNDS',
     imgSrc:
-      '//cdn.shopify.com/s/files/1/0594/0848/2477/t/3/assets/subscription-slider_rounds_400x400.png?v=1128720733247166019',
+      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/subscription-slider_rounds_400x400.png',
   },
 ]
 
@@ -72,7 +52,7 @@ export const roasts = [
     description:
       'Featuring a floral aroma, light caramel tasting notes, and a smooth finish.',
     imgSrc:
-      '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/GUNSHIP_BAG_UPDATE-1200.png?v=6516688591982501407',
+      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/GUNSHIP_BAG_UPDATE-1200.png',
   },
   {
     id: 2,
@@ -83,7 +63,7 @@ export const roasts = [
     description:
       'Known for his courageous legacy exploring the final frontier, he’s returning to gravity to harness the power of pour over coffee.',
     imgSrc:
-      '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/space_bear_1024x1024@2x.png?v=14534080239009770454',
+      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/space_bear_1024x1024@2x.png',
   },
   {
     id: 3,
@@ -94,7 +74,7 @@ export const roasts = [
     description:
       'Chase the ultimate wave with this 100% Guatemalan Arabica, roasted by our team of experts to bring out its delicious notes of maple, blood orange, and almond.',
     imgSrc:
-      '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/lava_panther_540x.png?v=12436704304646100494',
+      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/lava_panther_540x.png',
   },
   {
     id: 4,
@@ -105,7 +85,7 @@ export const roasts = [
     description:
       'Featuring a floral aroma, light caramel tasting notes, and a smooth finish.',
     imgSrc:
-      '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/GUNSHIP_BAG_UPDATE-1200.png?v=6516688591982501407',
+      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/GUNSHIP_BAG_UPDATE-1200.png',
   },
   {
     id: 5,
@@ -116,7 +96,7 @@ export const roasts = [
     description:
       'Known for his courageous legacy exploring the final frontier, he’s returning to gravity to harness the power of pour over coffee.',
     imgSrc:
-      '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/space_bear_1024x1024@2x.png?v=14534080239009770454',
+      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/space_bear_1024x1024@2x.png',
   },
   {
     id: 6,
@@ -127,7 +107,7 @@ export const roasts = [
     description:
       'Chase the ultimate wave with this 100% Guatemalan Arabica, roasted by our team of experts to bring out its delicious notes of maple, blood orange, and almond.',
     imgSrc:
-      '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/lava_panther_540x.png?v=12436704304646100494',
+      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/lava_panther_540x.png',
   },
   {
     id: 7,
@@ -138,7 +118,7 @@ export const roasts = [
     description:
       "Silencer Smooth's precise roasting specifications bring out its sweet aroma, citrus notes, and a crisp finish.",
     imgSrc:
-      '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/SS_BLEND_GROUP.png?v=7339731133813771079',
+      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/SS_BLEND_GROUP.png',
   },
   {
     id: 8,
@@ -149,7 +129,7 @@ export const roasts = [
     description:
       'Our delicious Hazelnut-Flavored Coffee is perfect for those who want just a taste of sweetness with their brew.',
     imgSrc:
-      '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/12CT_HAZELNUT_ROUNDS.png?v=11276618615006838150',
+      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/12CT_HAZELNUT_ROUNDS.png',
   },
   {
     id: 9,
@@ -160,7 +140,7 @@ export const roasts = [
     description:
       'We’ve decided to release delicious chocolate-flavored coffee rounds. These rounds are based on our classic Just Black Coffee Roast, with a little extra sweetness.',
     imgSrc:
-      '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/CHOCOLATE_12CT.png?v=9807210036573959527',
+      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/CHOCOLATE_12CT.png',
   },
 ]
 
@@ -170,35 +150,35 @@ export const summarySteps = [
     label: 'TEXTURE',
     centerLabel: '01',
     initImgSrc:
-      '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/coffeeClubSignUp_step2_200x200.png?v=736268878375192913',
+      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/coffeeClubSignUp_step2_200x200.png',
   },
   {
     id: 2,
     centerLabel: '02',
     label: 'ROAST',
     initImgSrc:
-      '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/coffeeClubSignUp_step3_200x200.png?v=8414826263250188919',
+      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/coffeeClubSignUp_step3_200x200.png',
   },
   {
     id: 3,
     label: 'QUANTITY',
     centerLabel: '03',
     initImgSrc:
-      '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/coffeeClubSignUp_step4_200x200.png?v=10610913660879988772',
+      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/coffeeClubSignUp_step4_200x200.png',
   },
   {
     id: 4,
     label: 'FREQUENCY',
     centerLabel: '04',
     initImgSrc:
-      '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/coffeeClubSignUp_step5_200x200.png?v=6894272251298571702',
+      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/coffeeClubSignUp_step5_200x200.png',
   },
   {
     id: 5,
     label: 'REVIEW',
     centerLabel: '05',
     initImgSrc:
-      '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/coffeeClubSignUp_step6_200x200.png?v=3796666373239231893',
+      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/coffeeClubSignUp_step6_200x200.png',
   },
 ]
 
@@ -210,7 +190,7 @@ export const quantities = [
     descriptionLabel: '12 oz.',
     description: 'About 30 cups per shipment.',
     imgSrc:
-      '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/subscription-slider_1-bag_400x400.png?v=9099848038866881308',
+      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/subscription-slider_1-bag_400x400.png',
   },
   {
     id: 2,
@@ -219,7 +199,7 @@ export const quantities = [
     descriptionLabel: '24 oz.',
     description: 'About 60 cups per shipment.',
     imgSrc:
-      '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/subscription-slider_2-bag_400x400.png?v=4106248448494023126',
+      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/subscription-slider_2-bag_400x400.png',
   },
   {
     id: 3,
@@ -228,7 +208,7 @@ export const quantities = [
     descriptionLabel: '36 oz.',
     description: 'About 90 cups per shipment.',
     imgSrc:
-      '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/subscription-slider_3-bag_400x400.png?v=10576128729452119620',
+      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/subscription-slider_3-bag_400x400.png',
   },
   {
     id: 4,
@@ -237,7 +217,7 @@ export const quantities = [
     descriptionLabel: '48 oz.',
     description: 'About 120 cups per shipment.',
     imgSrc:
-      '//cdn.shopify.com/s/files/1/0594/0848/2477/t/1/assets/subscription-slider_4-bag_400x400.png?v=4968723301670925721',
+      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/subscription-slider_4-bag_400x400.png',
   },
 ]
 
@@ -271,3 +251,8 @@ export const frequencies = [
     centerLabelSub: 'DAYS',
   },
 ]
+
+export const chevronRightImgSrc =
+  'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/chevron_right_white_24dp.svg'
+export const chevronLeftImgSrc =
+  'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/chevron_left_white_24dp.svg'
