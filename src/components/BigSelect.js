@@ -14,6 +14,9 @@ const BigSelect = (props) => {
     centerLabelSub,
     setToFortyEight,
   } = props
+
+  const newResponsive = true
+
   return (
     <div
       onClick={() => handleSelection(id)}
@@ -21,8 +24,8 @@ const BigSelect = (props) => {
         selected
           ? 'tw-border-2 border-highlight-400'
           : 'tw-border tw-border-light-300'
-      } ${
-        !!setToFortyEight && 'tw-h-48 tw-object-fit'
+      } ${!!setToFortyEight && 'tw-h-48 tw-object-fit'} ${
+        newResponsive && 'tw-h-full'
       } bg-dark-400 tw-rounded  tw-border-solid  hover:border-highlight-400 tw-p-4 tw-relative`}
     >
       <div className="tw-flex tw-justify-center tw-w-full">
@@ -42,6 +45,7 @@ const BigSelect = (props) => {
           </div>
         </div>
       )}
+      {centerLabel && <div className="bg-red-200 tw-w-40 tw-h-40" />}
       {imgSrc && (
         <div className="tw-flex tw-justify-center tw-w-full">
           <img alt={label} className="tw-w-40 tw-object-contain" src={imgSrc} />

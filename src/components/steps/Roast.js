@@ -41,11 +41,10 @@ const Roast = (props) => {
           {/* <div className="tw-grid tw-gap-x-4 tw-grid-cols-3"> */}
           <div className="tw-flex tw-justify-between tw-space-x-4 tw-overflow-scroll tw-max-w-xl scrollbar-hide">
             {filteredRoasts.map((roast) => (
-              <div className="tw-w-64">
+              <div key={roast.id} className="tw-w-64">
                 <BigSelectTypeTwo
                   isCarousel
                   id={roast.id}
-                  key={roast.id}
                   label={roast.label}
                   handleSelection={(roastId) => handleSelectedRoastId(roastId)}
                   selected={roast.id === selectedRoastId}
