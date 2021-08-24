@@ -26,21 +26,23 @@ export const textures = [
     id: 1,
     label: 'GROUND',
     imgSrc:
-      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/Blank_Bag_Ground_V2_400x400.png',
+      // 'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/Blank_Bag_Ground_V2_400x400.png',
+      'https://cdn.shopify.com/s/files/1/0594/0848/2477/t/4/assets/new-coffee.jpeg?v=13979813498305047952',
   },
   {
     id: 2,
     label: 'WHOLE BEAN',
     imgSrc:
-      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/Blank_Bag_Whole_Bean_V1_400x400.png',
+      // 'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/Blank_Bag_Whole_Bean_V1_400x400.png',
+      'https://cdn.shopify.com/s/files/1/0594/0848/2477/t/4/assets/new-coffee2.png?v=17151504613116769587',
   },
-  {
-    id: 3,
-    label: 'ROUNDS',
-    imgSrc:
-      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/subscription-slider_rounds_400x400.png',
-  },
-]
+  // {
+  //   id: 3,
+  //   label: 'ROUNDS',
+  //   imgSrc:
+  //     'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/subscription-slider_rounds_400x400.png',
+  // },
+];
 
 export const roasts = [
   {
@@ -142,7 +144,7 @@ export const roasts = [
     imgSrc:
       'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/CHOCOLATE_12CT.png',
   },
-]
+];
 
 export const summarySteps = [
   {
@@ -180,7 +182,7 @@ export const summarySteps = [
     initImgSrc:
       'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/coffeeClubSignUp_step6_200x200.png',
   },
-]
+];
 
 export const quantities = [
   {
@@ -219,7 +221,7 @@ export const quantities = [
     imgSrc:
       'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/subscription-slider_4-bag_400x400.png',
   },
-]
+];
 
 export const frequencies = [
   {
@@ -250,9 +252,9 @@ export const frequencies = [
     centerLabel: '60',
     centerLabelSub: 'DAYS',
   },
-]
+];
 
 export const chevronRightImgSrc =
-  'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/chevron_right_white_24dp.svg'
+  'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/chevron_right_white_24dp.svg';
 export const chevronLeftImgSrc =
-  'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/chevron_left_white_24dp.svg'
+  'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/chevron_left_white_24dp.svg';

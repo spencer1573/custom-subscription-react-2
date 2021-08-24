@@ -20,7 +20,7 @@ const Texture = (props) => {
           </div>
         </div>
         <div className="tw-flex tw-justify-center tw-w-full tw-px-4">
-          <div className="tw-grid tw-gap-x-4 tw-grid-cols-3">
+          <div className="tw-grid tw-gap-x-4 tw-grid-cols-2">
             {textures.map((texture) => (
               <BigSelect
                 key={texture.id}
