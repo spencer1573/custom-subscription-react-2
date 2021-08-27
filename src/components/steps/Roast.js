@@ -81,54 +81,40 @@ const Roast = (props) => {
     document.getElementById(`roast-href-${visibleRoastId}`).click()
   }, [visibleRoastId])
 
-  return (
-    <Fragment>
-      <div className="tw-w-full tw-relative">
-        {filteredRoasts.map((roast) => (
-          <a
-            className="tw-text-white tw-absolute tw-top-0 tw-hidden"
-            id={`roast-href-${roast.hrefId}`}
-            href={`#roast-${roast.hrefId}`}
-          >
-            roast href {roast.hrefId}
-          </a>
-        ))}
-        <div className="tw-flex tw-justify-center tw-w-full">
-          <div className="text-highlight-500 tw-py-4">SELECT YOUR ROAST</div>
-        </div>
-
-        <div className="tw-flex tw-justify-center tw-w-full">
-          <img
-            onClick={() => scrollLeft()}
-            alt="Chevron or Arrow Left"
-            className="tw-text-white tw-mr-8"
-            src={chevronLeftImgSrc}
-          />
-          {/* <div className="tw-grid tw-gap-x-4 tw-grid-cols-3"> */}
-          <div
-            id="scrollElement"
-            className="tw-flex tw-justify-between tw-space-x-4 tw-overflow-scroll tw-max-w-xl scrollbar-hide scroll-smooth"
-          >
-            {filteredRoasts.map((roast) => (
-              <div
-                id={`roast-${roast.hrefId}`}
-                key={roast.id}
-                className="tw-w-64"
-              >
-                <BigSelectTypeTwo
-                  isCarousel
-                  id={roast.id}
-                  label={roast.label}
-                  handleSelection={(roastId) => handleSelectedRoastId(roastId)}
-                  selected={roast.id === selectedRoastId}
-                  subLabel={roast.subLabel}
-                  description={roast.description}
-                  imgSrc={roast.imgSrc}
-                />
-              </div>
-            ))}
-            {/* TODO #rm */}
-            {/* <BigSelect
+  const horizontalScroll = () => {
+    return (
+      <div className="tw-flex tw-justify-center tw-w-full">
+        <img
+          onClick={() => scrollLeft()}
+          alt="Chevron or Arrow Left"
+          className="tw-text-white tw-mr-8"
+          src={chevronLeftImgSrc}
+        />
+        {/* <div className="tw-grid tw-gap-x-4 tw-grid-cols-3"> */}
+        <div
+          id="scrollElement"
+          className="tw-flex tw-justify-between tw-space-x-4 tw-overflow-scroll tw-max-w-xl scrollbar-hide scroll-smooth"
+        >
+          {filteredRoasts.map((roast) => (
+            <div
+              id={`roast-${roast.hrefId}`}
+              key={roast.id}
+              className="tw-w-64"
+            >
+              <BigSelectTypeTwo
+                isCarousel
+                id={roast.id}
+                label={roast.label}
+                handleSelection={(roastId) => handleSelectedRoastId(roastId)}
+                selected={roast.id === selectedRoastId}
+                subLabel={roast.subLabel}
+                description={roast.description}
+                imgSrc={roast.imgSrc}
+              />
+            </div>
+          ))}
+          {/* TODO #rm */}
+          {/* <BigSelect
               label="WHOLE BEAN"
               imgSrc="//cdn.shopify.com/s/files/1/0594/0848/2477/t/3/assets/Blank_Bag_Whole_Bean_V1_400x400.png?v=7523416550851258749"
             />
@@ -136,25 +122,44 @@ const Roast = (props) => {
               label="ROUNDS"
               imgSrc="//cdn.shopify.com/s/files/1/0594/0848/2477/t/3/assets/subscription-slider_rounds_400x400.png?v=1128720733247166019"
             /> */}
-          </div>
-
-          <img
-            onClick={() => scrollRight()}
-            alt="Chevron or Arrow Right"
-            className="tw-text-white tw-ml-8"
-            src={chevronRightImgSrc}
-          />
         </div>
-        <input
-          type="range"
-          min="1"
-          max={filteredRoastsCount}
-          value="50"
-          class="slider"
-          id="myRange"
-        ></input>
+
+        <img
+          onClick={() => scrollRight()}
+          alt="Chevron or Arrow Right"
+          className="tw-text-white tw-ml-8"
+          src={chevronRightImgSrc}
+        />
       </div>
-    </Fragment>
+    )
+  }
+
+  return (
+    <div className="tw-w-full tw-relative">
+      {filteredRoasts.map((roast) => (
+        <a
+          className="tw-text-white tw-absolute tw-top-0 tw-hidden"
+          id={`roast-href-${roast.hrefId}`}
+          href={`#roast-${roast.hrefId}`}
+        >
+          roast href {roast.hrefId}
+        </a>
+      ))}
+      <div className="tw-flex tw-justify-center tw-w-full">
+        <div className="text-highlight-500 tw-py-4">SELECT YOUR ROAST</div>
+      </div>
+
+      {horizontalScroll}
+
+      <input
+        type="range"
+        min="1"
+        max={filteredRoastsCount}
+        value="50"
+        class="slider"
+        id="myRange"
+      ></input>
+    </div>
   )
 }
 
