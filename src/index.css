@@ -42,18 +42,22 @@
 }
 
 /* scrollbar hide */
-.scrollbar-hide {
+#csw .scrollbar-hide {
   /* Firefox */
   scrollbar-width: none;
   /* safari and chrome */
 }
 
-.scrollbar-hide::-webkit-scrollbar {
+#csw .scrollbar-hide::-webkit-scrollbar {
   display: 'none';
 }
 
-.scrollbar-hide::-webkit-scrollbar {
+#csw .scrollbar-hide::-webkit-scrollbar {
   height: 0;
   width: 0; /* Remove scrollbar space */
   background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+#csw .scroll-smooth {
+  scroll-behavior: smooth;
 }

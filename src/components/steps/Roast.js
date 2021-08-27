@@ -1,7 +1,11 @@
-import React, { Fragment, useContext } from 'react'
+import React, { Fragment, useContext, useEffect, useState } from 'react'
 import BigSelectTypeTwo from '../BigSelectTypeTwo'
 import { UserContext } from '../../App'
 import { roasts } from '../../constants/constants'
+import {
+  chevronRightImgSrc,
+  chevronLeftImgSrc,
+} from '../../constants/constants'
 
 const Roast = (props) => {
   const { selectedTextureId, selectedRoastId, setSelectedRoastId } =
@@ -23,25 +27,94 @@ const Roast = (props) => {
     })
   }
 
+  const [visibleRoastId, setVisibleRoastId] = useState(1)
+
   //TODO adjust later for testing
   filteredRoasts = roasts
+
+  filteredRoasts.map((roast, index) => {
+    roast.hrefId = index + 1
+    return roast
+  })
+
+  console.log('filtered roasts ', filteredRoasts)
+
+  const filteredRoastsCount = roasts.length
+
+  const middleRoastNumber = roasts
 
   const handleSelectedRoastId = (roastId) => {
     console.log('roast id ', roastId)
     setSelectedRoastId(roastId)
   }
 
+  // const scrollElement =
+
+  const scrollRight = async () => {
+    console.log('1 ** ', filteredRoasts.length)
+    console.log('2 ** ', visibleRoastId)
+    console.log('1 ** ', filteredRoasts.length + 1 === visibleRoastId)
+    if (visibleRoastId === 1 && filteredRoasts.length > 2) {
+      await setVisibleRoastId(visibleRoastId + 2)
+    } else if (filteredRoasts.length > visibleRoastId) {
+      await setVisibleRoastId(visibleRoastId + 1)
+      // console.log('visible roast id ', visibleRoastId)
+      // document.getElementById(`roast-href-${visibleRoastId}`).click()
+    }
+    // document.getElementById('scrollElement').scrollLeft += 100
+    // document.getElementById('href-9').click()
+    // window.location.href('#roast-8')
+  }
+
+  const scrollLeft = async () => {
+    if (visibleRoastId === filteredRoasts.length && filteredRoasts.length > 2) {
+      await setVisibleRoastId(visibleRoastId - 2)
+    } else if (1 < visibleRoastId) {
+      await setVisibleRoastId(visibleRoastId - 1)
+      // console.log('visible roast id ', visibleRoastId)
+      // document.getElementById(`roast-href-${visibleRoastId}`).click()
+    }
+  }
+
+  useEffect(() => {
+    console.log('visible roast id ', visibleRoastId)
+    document.getElementById(`roast-href-${visibleRoastId}`).click()
+  }, [visibleRoastId])
+
   return (
     <Fragment>
-      <div className="tw-w-full">
+      <div className="tw-w-full tw-relative">
+        {filteredRoasts.map((roast) => (
+          <a
+            className="tw-text-white tw-absolute tw-top-0 tw-hidden"
+            id={`roast-href-${roast.hrefId}`}
+            href={`#roast-${roast.hrefId}`}
+          >
+            roast href {roast.hrefId}
+          </a>
+        ))}
         <div className="tw-flex tw-justify-center tw-w-full">
           <div className="text-highlight-500 tw-py-4">SELECT YOUR ROAST</div>
         </div>
+
         <div className="tw-flex tw-justify-center tw-w-full">
+          <img
+            onClick={() => scrollLeft()}
+            alt="Chevron or Arrow Left"
+            className="tw-text-white tw-mr-8"
+            src={chevronLeftImgSrc}
+          />
           {/* <div className="tw-grid tw-gap-x-4 tw-grid-cols-3"> */}
-          <div className="tw-flex tw-justify-between tw-space-x-4 tw-overflow-scroll tw-max-w-xl scrollbar-hide">
+          <div
+            id="scrollElement"
+            className="tw-flex tw-justify-between tw-space-x-4 tw-overflow-scroll tw-max-w-xl scrollbar-hide scroll-smooth"
+          >
             {filteredRoasts.map((roast) => (
-              <div key={roast.id} className="tw-w-64">
+              <div
+                id={`roast-${roast.hrefId}`}
+                key={roast.id}
+                className="tw-w-64"
+              >
                 <BigSelectTypeTwo
                   isCarousel
                   id={roast.id}
@@ -64,7 +137,22 @@ const Roast = (props) => {
               imgSrc="//cdn.shopify.com/s/files/1/0594/0848/2477/t/3/assets/subscription-slider_rounds_400x400.png?v=1128720733247166019"
             /> */}
           </div>
+
+          <img
+            onClick={() => scrollRight()}
+            alt="Chevron or Arrow Right"
+            className="tw-text-white tw-ml-8"
+            src={chevronRightImgSrc}
+          />
         </div>
+        <input
+          type="range"
+          min="1"
+          max={filteredRoastsCount}
+          value="50"
+          class="slider"
+          id="myRange"
+        ></input>
       </div>
     </Fragment>
   )
