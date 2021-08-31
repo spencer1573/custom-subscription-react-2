@@ -149,16 +149,16 @@ const Roast = (props) => {
         <div className="text-highlight-500 tw-py-4">SELECT YOUR ROAST</div>
       </div>
 
-      {horizontalScroll}
+      {horizontalScroll()}
 
-      <input
+      {/* <input
         type="range"
         min="1"
         max={filteredRoastsCount}
         value="50"
-        class="slider"
+        className="slider"
         id="myRange"
-      ></input>
+      ></input> */}
     </div>
   )
 }
