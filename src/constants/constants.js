@@ -47,7 +47,7 @@ export const textures = [
 export const roasts = [
   {
     id: 1,
-    value: 40550338330797, // actual variant in narwal
+    value: 40460851019952, 
     type: 'ground-roast',
     label: 'Coffee',
     subLabel: 'LIGHT',
@@ -58,89 +58,67 @@ export const roasts = [
   },
   {
     id: 2,
-    value: 40550338330797, // need to make real (gunship ground roast in narwal value)
+    value: 40460851019952, 
     type: 'ground-roast',
-    label: 'SPACE BEAR',
+    label: 'Coffee',
     subLabel: 'LIGHT',
     description:
-      'Known for his courageous legacy exploring the final frontier, he’s returning to gravity to harness the power of pour over coffee.',
+      'Test Coffee',
     imgSrc:
       'https://cdn.shopify.com/s/files/1/0595/7478/0080/t/1/assets/new-coffee3.jpeg?v=4151718430318245096',
   },
   {
     id: 3,
-    value: 40550338330797, // need to make real (gunship ground roast in narwal value)
+    value: 40460851019952, 
     type: 'ground-roast',
-    label: 'LAVA PANTHER',
+    label: 'Coffee',
     subLabel: 'MEDIUM',
     description:
-      'Chase the ultimate wave with this 100% Guatemalan Arabica, roasted by our team of experts to bring out its delicious notes of maple, blood orange, and almond.',
+      'Test Coffee',
     imgSrc:
       'https://cdn.shopify.com/s/files/1/0595/7478/0080/t/1/assets/new-coffee3.jpeg?v=4151718430318245096',
   },
   {
     id: 4,
-    value: 40550338363565, // actual variant in narwal
+    value: 40460851019952, 
     type: 'whole-roast',
-    label: 'GUNSHIP',
+    label: 'Coffee',
     subLabel: 'LIGHT',
     description:
-      'Featuring a floral aroma, light caramel tasting notes, and a smooth finish.',
+      'Test Coffee',
     imgSrc:
       'https://cdn.shopify.com/s/files/1/0595/7478/0080/t/1/assets/new-coffee3.jpeg?v=4151718430318245096',
   },
   {
     id: 5,
-    value: 40550338330797, // need to make real (gunship ground roast in narwal value)
+    value: 40460851019952, 
     type: 'whole-roast',
-    label: 'SPACE BEAR',
+    label: 'Coffee',
     subLabel: 'LIGHT',
     description:
-      'Known for his courageous legacy exploring the final frontier, he’s returning to gravity to harness the power of pour over coffee.',
+      'Test Coffee',
     imgSrc:
       'https://cdn.shopify.com/s/files/1/0595/7478/0080/t/1/assets/new-coffee3.jpeg?v=4151718430318245096',
   },
   {
     id: 6,
-    value: 40550338330797, // need to make real (gunship ground roast in narwal value)
+    value: 40460851019952, 
     type: 'whole-roast',
-    label: 'LAVA PANTHER',
+    label: 'Coffee',
     subLabel: 'MEDIUM',
     description:
-      'Chase the ultimate wave with this 100% Guatemalan Arabica, roasted by our team of experts to bring out its delicious notes of maple, blood orange, and almond.',
+      'Test Coffee',
     imgSrc:
       'https://cdn.shopify.com/s/files/1/0595/7478/0080/t/1/assets/new-coffee3.jpeg?v=4151718430318245096',
   },
   {
     id: 7,
-    value: 40550338330797, // need to make real (gunship ground roast in narwal value)
+    value: 40460851019952, 
     type: 'rounds-roast',
-    label: 'SILENCER SMOOTH',
+    label: 'Coffee',
     subLabel: 'LIGHT',
     description:
-      "Silencer Smooth's precise roasting specifications bring out its sweet aroma, citrus notes, and a crisp finish.",
-    imgSrc:
-      'https://cdn.shopify.com/s/files/1/0595/7478/0080/t/1/assets/new-coffee3.jpeg?v=4151718430318245096',
-  },
-  {
-    id: 8,
-    value: 40550338330797, // need to make real (gunship ground roast in narwal value)
-    type: 'rounds-roast',
-    label: 'HAZELNUT FLAVORED ROUNDS',
-    subLabel: 'MEDIUM',
-    description:
-      'Our delicious Hazelnut-Flavored Coffee is perfect for those who want just a taste of sweetness with their brew.',
-    imgSrc:
-      'https://cdn.shopify.com/s/files/1/0595/7478/0080/t/1/assets/new-coffee3.jpeg?v=4151718430318245096',
-  },
-  {
-    id: 9,
-    value: 40550338330797, // need to make real (gunship ground roast in narwal value)
-    type: 'rounds-roast',
-    label: 'CHOCOLATE FLAVORED ROUNDS',
-    subLabel: 'MEDIUM',
-    description:
-      'We’ve decided to release delicious chocolate-flavored coffee rounds. These rounds are based on our classic Just Black Coffee Roast, with a little extra sweetness.',
+      "Test Coffee",
     imgSrc:
       'https://cdn.shopify.com/s/files/1/0595/7478/0080/t/1/assets/new-coffee3.jpeg?v=4151718430318245096',
   },
@@ -189,65 +167,61 @@ export const quantities = [
     id: 1,
     value: 1,
     label: '1 BAG',
-    descriptionLabel: '12 oz.',
-    description: 'About 30 cups per shipment.',
+    description: 'Test',
     imgSrc:
-      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/subscription-slider_1-bag_400x400.png',
+      'https://cdn.shopify.com/s/files/1/0595/7478/0080/t/1/assets/new-coffee3.jpeg?v=4151718430318245096',
   },
   {
     id: 2,
     value: 2,
     label: '2 BAG',
-    descriptionLabel: '24 oz.',
-    description: 'About 60 cups per shipment.',
+    description: 'Test',
     imgSrc:
-      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/subscription-slider_2-bag_400x400.png',
+      'https://cdn.shopify.com/s/files/1/0595/7478/0080/t/1/assets/new-coffee3.jpeg?v=4151718430318245096',
   },
   {
     id: 3,
     value: 3,
     label: '3 BAG',
-    descriptionLabel: '36 oz.',
-    description: 'About 90 cups per shipment.',
+    description: 'Test',
     imgSrc:
-      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/subscription-slider_3-bag_400x400.png',
+      'https://cdn.shopify.com/s/files/1/0595/7478/0080/t/1/assets/new-coffee3.jpeg?v=4151718430318245096',
   },
   {
     id: 4,
     value: 4,
     label: '4 BAG',
-    descriptionLabel: '48 oz.',
-    description: 'About 120 cups per shipment.',
+    description: 'Test',
     imgSrc:
-      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/subscription-slider_4-bag_400x400.png',
+      'https://cdn.shopify.com/s/files/1/0595/7478/0080/t/1/assets/new-coffee3.jpeg?v=4151718430318245096',
   },
 ];
 
 export const frequencies = [
   {
     id: 1,
-    value: 584876205, // 14 day code for narwal
+    value: 647889072, // 14 day code for narwal
     label: 'SHIPS EVERY 14 DAYS',
     centerLabel: '14',
     centerLabelSub: 'DAYS',
   },
   {
     id: 2,
-    value: 584908973, // 21 day code for narwal
+    value: 647921840, // 21 day code for narwal
     label: 'SHIPS EVERY 21 DAYS',
     centerLabel: '21',
     centerLabelSub: 'DAYS',
   },
   {
     id: 3,
-    value: 582090925, // 30 day code for narwal
+    value: 647954608, // 30 day code for narwal
     label: 'SHIPS EVERY 30 DAYS',
     centerLabel: '30',
     centerLabelSub: 'DAYS',
   },
   {
     id: 4,
-    value: 584941741, // 60 day code for narwal
+    value: 647987376, // 60 day code for narwal
     label: 'SHIPS EVERY 60 DAYS',
     centerLabel: '60',
     centerLabelSub: 'DAYS',
@@ -258,3 +232,6 @@ export const chevronRightImgSrc =
   'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/chevron_right_white_24dp.svg';
 export const chevronLeftImgSrc =
   'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/chevron_left_white_24dp.svg';
+
+
+  

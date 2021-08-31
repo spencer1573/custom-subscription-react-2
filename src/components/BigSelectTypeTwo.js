@@ -34,7 +34,7 @@ const BigSelect = (props) => {
       <div className="tw-flex tw-justify-center tw-w-full">
         <div className="tw-text-white">{subLabel}</div>
       </div>
-      <div className="tw-flex tw-justify-center tw-w-full">
+      <div className="tw-flex tw-justify-center tw-w-full tw-p-4">
         <img alt={label} className="tw-h-24 tw-object-contain" src={imgSrc} />
       </div>
       <div className="tw-flex tw-justify-center tw-w-full w-24">
