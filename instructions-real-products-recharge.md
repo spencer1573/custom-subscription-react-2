@@ -61,8 +61,30 @@ and you'll see `selling_id` i think
 
 if that network thing is not coming through
 
+go to `/sections/product-template.liquid`
+
 <script>
     console.log('Product', {{ product | json }})
   </script>
 
-and put that in constants
+add this to it in the last div
+
+push up narwal changes
+
+then go to the console when your looking at a product on the website
+
+then find `seller_plans... ` and look through there till you find the seller plans
+
+copy those seller plan ids as values
+
+in the `frequencies` constant in the `constants/constant`
+
+7. push up narwal
+
+```
+cd narwal_theme_2
+```
+
+```
+shopify theme push
+```
