@@ -49,12 +49,12 @@ export const roasts = [
     id: 1,
     value: 40550338330797, // actual variant in narwal
     type: 'ground-roast',
-    label: 'GUNSHIP',
+    label: 'Coffee',
     subLabel: 'LIGHT',
     description:
-      'Featuring a floral aroma, light caramel tasting notes, and a smooth finish.',
+      'Test Coffee',
     imgSrc:
-      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/GUNSHIP_BAG_UPDATE-1200.png',
+      'https://cdn.shopify.com/s/files/1/0595/7478/0080/t/1/assets/new-coffee3.jpeg?v=4151718430318245096',
   },
   {
     id: 2,
@@ -65,7 +65,7 @@ export const roasts = [
     description:
       'Known for his courageous legacy exploring the final frontier, he’s returning to gravity to harness the power of pour over coffee.',
     imgSrc:
-      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/space_bear_1024x1024@2x.png',
+      'https://cdn.shopify.com/s/files/1/0595/7478/0080/t/1/assets/new-coffee3.jpeg?v=4151718430318245096',
   },
   {
     id: 3,
@@ -76,7 +76,7 @@ export const roasts = [
     description:
       'Chase the ultimate wave with this 100% Guatemalan Arabica, roasted by our team of experts to bring out its delicious notes of maple, blood orange, and almond.',
     imgSrc:
-      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/lava_panther_540x.png',
+      'https://cdn.shopify.com/s/files/1/0595/7478/0080/t/1/assets/new-coffee3.jpeg?v=4151718430318245096',
   },
   {
     id: 4,
@@ -87,7 +87,7 @@ export const roasts = [
     description:
       'Featuring a floral aroma, light caramel tasting notes, and a smooth finish.',
     imgSrc:
-      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/GUNSHIP_BAG_UPDATE-1200.png',
+      'https://cdn.shopify.com/s/files/1/0595/7478/0080/t/1/assets/new-coffee3.jpeg?v=4151718430318245096',
   },
   {
     id: 5,
@@ -98,7 +98,7 @@ export const roasts = [
     description:
       'Known for his courageous legacy exploring the final frontier, he’s returning to gravity to harness the power of pour over coffee.',
     imgSrc:
-      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/space_bear_1024x1024@2x.png',
+      'https://cdn.shopify.com/s/files/1/0595/7478/0080/t/1/assets/new-coffee3.jpeg?v=4151718430318245096',
   },
   {
     id: 6,
@@ -109,7 +109,7 @@ export const roasts = [
     description:
       'Chase the ultimate wave with this 100% Guatemalan Arabica, roasted by our team of experts to bring out its delicious notes of maple, blood orange, and almond.',
     imgSrc:
-      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/lava_panther_540x.png',
+      'https://cdn.shopify.com/s/files/1/0595/7478/0080/t/1/assets/new-coffee3.jpeg?v=4151718430318245096',
   },
   {
     id: 7,
@@ -120,7 +120,7 @@ export const roasts = [
     description:
       "Silencer Smooth's precise roasting specifications bring out its sweet aroma, citrus notes, and a crisp finish.",
     imgSrc:
-      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/SS_BLEND_GROUP.png',
+      'https://cdn.shopify.com/s/files/1/0595/7478/0080/t/1/assets/new-coffee3.jpeg?v=4151718430318245096',
   },
   {
     id: 8,
@@ -131,7 +131,7 @@ export const roasts = [
     description:
       'Our delicious Hazelnut-Flavored Coffee is perfect for those who want just a taste of sweetness with their brew.',
     imgSrc:
-      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/12CT_HAZELNUT_ROUNDS.png',
+      'https://cdn.shopify.com/s/files/1/0595/7478/0080/t/1/assets/new-coffee3.jpeg?v=4151718430318245096',
   },
   {
     id: 9,
@@ -142,7 +142,7 @@ export const roasts = [
     description:
       'We’ve decided to release delicious chocolate-flavored coffee rounds. These rounds are based on our classic Just Black Coffee Roast, with a little extra sweetness.',
     imgSrc:
-      'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/CHOCOLATE_12CT.png',
+      'https://cdn.shopify.com/s/files/1/0595/7478/0080/t/1/assets/new-coffee3.jpeg?v=4151718430318245096',
   },
 ];
 
