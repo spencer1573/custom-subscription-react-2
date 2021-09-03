@@ -16,7 +16,7 @@ const StepsSummary = (props) => {
       {/* <div>value: {value}</div> */}
 
       <div className="tw-flex tw-justify-center tw-w-full tw-pt-4 tw-pb-8 ">
-        <div className="tw-grid tw-gap-x-8 tw-grid-cols-6 ">
+        <div className="tw-grid tw-gap-x-4 lg:tw-gap-x-8 tw-grid-cols-6 ">
           {/* <SmallSelect /> */}
           {summarySteps.map((step) => (
             <SmallSelect

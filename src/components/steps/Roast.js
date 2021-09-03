@@ -227,9 +227,9 @@ const Roast = (props) => {
         <div className="text-highlight-500 tw-py-4">SELECT YOUR ROAST</div>
       </div>
 
-      <div className=" tw-hidden md:tw-block ">{horizontalScroll()}</div>
+      <div className="tw-hidden md:tw-block ">{horizontalScroll()}</div>
 
-      <div className=" tw-block md:tw-hidden">{mobileVerticalScroll()}</div>
+      <div className="tw-block md:tw-hidden">{mobileVerticalScroll()}</div>
     </div>
   )
 }

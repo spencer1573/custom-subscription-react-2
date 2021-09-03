@@ -139,7 +139,7 @@ const App = () => {
         {/* <div className="tw-w-full h-min-64 bg-dark-700 tw-pt-4 tw-pb-8"> */}
         {/* <div className="tw-w-full h-min-64 bg-dark-700 tw-pt-4 tw-pb-32"></div> */}
         <div className="tw-w-full h-min-64 tw-bg-blue-900 tw-pt-4 tw-pb-32">
-          <div className="tw-flex tw-justify-between tw-w-full tw-px-4">
+          <div className="tw-block md:tw-hidden tw-flex tw-justify-between tw-w-full tw-px-4">
             <img
               alt="Chevron or Arrow Left"
               className="tw-text-white"
@@ -161,7 +161,11 @@ const App = () => {
             {pageId === 4 && <Frequency />}
             {pageId === 5 && <Review />}
           </div>
-          {pageId !== 5 && <StepsSummary />}
+          {pageId !== 5 && (
+            <div className="tw-hidden md:tw-block">
+              <StepsSummary />
+            </div>
+          )}
         </div>
       </div>
     </UserContext.Provider>
