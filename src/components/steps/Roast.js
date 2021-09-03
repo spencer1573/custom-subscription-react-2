@@ -1,10 +1,12 @@
-import React, { Fragment, useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import BigSelectTypeTwo from '../BigSelectTypeTwo'
 import { UserContext } from '../../App'
 import { roasts } from '../../constants/constants'
 import {
   chevronRightImgSrc,
   chevronLeftImgSrc,
+  chevronUpImgSrc,
+  chevronDownImgSrc,
 } from '../../constants/constants'
 
 const Roast = (props) => {
@@ -27,9 +29,9 @@ const Roast = (props) => {
     })
   }
 
-  const [visibleRoastId, setVisibleRoastId] = useState(1)
+  const [visibleHorizontalRoastId, setVisibleHorizontalRoastId] = useState(1)
+  const [visibleVerticalRoastId, setVisibleVerticalRoastId] = useState(1)
 
-  //TODO adjust later for testing
   filteredRoasts = roasts
 
   filteredRoasts.map((roast, index) => {
@@ -48,38 +50,44 @@ const Roast = (props) => {
     setSelectedRoastId(roastId)
   }
 
-  // const scrollElement =
-
   const scrollRight = async () => {
-    console.log('1 ** ', filteredRoasts.length)
-    console.log('2 ** ', visibleRoastId)
-    console.log('1 ** ', filteredRoasts.length + 1 === visibleRoastId)
-    if (visibleRoastId === 1 && filteredRoasts.length > 2) {
-      await setVisibleRoastId(visibleRoastId + 2)
-    } else if (filteredRoasts.length > visibleRoastId) {
-      await setVisibleRoastId(visibleRoastId + 1)
-      // console.log('visible roast id ', visibleRoastId)
-      // document.getElementById(`roast-href-${visibleRoastId}`).click()
+    if (visibleHorizontalRoastId === 1 && filteredRoasts.length > 2) {
+      await setVisibleHorizontalRoastId(visibleHorizontalRoastId + 2)
+    } else if (filteredRoasts.length > visibleHorizontalRoastId) {
+      await setVisibleHorizontalRoastId(visibleHorizontalRoastId + 1)
     }
-    // document.getElementById('scrollElement').scrollLeft += 100
-    // document.getElementById('href-9').click()
-    // window.location.href('#roast-8')
   }
 
   const scrollLeft = async () => {
-    if (visibleRoastId === filteredRoasts.length && filteredRoasts.length > 2) {
-      await setVisibleRoastId(visibleRoastId - 2)
-    } else if (1 < visibleRoastId) {
-      await setVisibleRoastId(visibleRoastId - 1)
-      // console.log('visible roast id ', visibleRoastId)
-      // document.getElementById(`roast-href-${visibleRoastId}`).click()
+    if (
+      visibleHorizontalRoastId === filteredRoasts.length &&
+      filteredRoasts.length > 2
+    ) {
+      await setVisibleHorizontalRoastId(visibleHorizontalRoastId - 2)
+    } else if (1 < visibleHorizontalRoastId) {
+      await setVisibleHorizontalRoastId(visibleHorizontalRoastId - 1)
+    }
+  }
+
+  const scrollDown = async () => {
+    if (filteredRoasts.length > visibleVerticalRoastId) {
+      await setVisibleVerticalRoastId(visibleVerticalRoastId + 1)
+    }
+  }
+
+  const scrollUp = async () => {
+    if (1 < visibleVerticalRoastId) {
+      await setVisibleVerticalRoastId(visibleVerticalRoastId - 1)
     }
   }
 
   useEffect(() => {
-    console.log('visible roast id ', visibleRoastId)
-    document.getElementById(`roast-href-${visibleRoastId}`).click()
-  }, [visibleRoastId])
+    document.getElementById(`roast-h-href-${visibleHorizontalRoastId}`).click()
+  }, [visibleHorizontalRoastId])
+
+  useEffect(() => {
+    document.getElementById(`roast-v-href-${visibleVerticalRoastId}`).click()
+  }, [visibleVerticalRoastId])
 
   const horizontalScroll = () => {
     return (
@@ -90,15 +98,14 @@ const Roast = (props) => {
           className="tw-text-white tw-mr-8"
           src={chevronLeftImgSrc}
         />
-        {/* <div className="tw-grid tw-gap-x-4 tw-grid-cols-3"> */}
         <div
           id="scrollElement"
           className="tw-flex tw-justify-between tw-space-x-4 tw-overflow-scroll tw-max-w-xl scrollbar-hide scroll-smooth"
         >
           {filteredRoasts.map((roast) => (
             <div
-              id={`roast-${roast.hrefId}`}
-              key={roast.id}
+              id={`roast-h-${roast.hrefId}`}
+              key={roast.hrefId}
               className="tw-w-64"
             >
               <BigSelectTypeTwo
@@ -113,15 +120,6 @@ const Roast = (props) => {
               />
             </div>
           ))}
-          {/* TODO #rm */}
-          {/* <BigSelect
-              label="WHOLE BEAN"
-              imgSrc="//cdn.shopify.com/s/files/1/0594/0848/2477/t/3/assets/Blank_Bag_Whole_Bean_V1_400x400.png?v=7523416550851258749"
-            />
-            <BigSelect
-              label="ROUNDS"
-              imgSrc="//cdn.shopify.com/s/files/1/0594/0848/2477/t/3/assets/subscription-slider_rounds_400x400.png?v=1128720733247166019"
-            /> */}
         </div>
 
         <img
@@ -134,13 +132,93 @@ const Roast = (props) => {
     )
   }
 
+  const mobileVerticalScroll = () => {
+    return (
+      <div className="tw-flex tw-w-full">
+        <div className="tw-flex tw-justify-center tw-w-full">
+          <div className="tw-invisible tw-flex tw-bg-red-200 tw-justify-center tw-place-items-center ">
+            <div className="tw-flex-col">
+              <div className="tw-w-full">
+                <img
+                  alt="Space holder"
+                  className="tw-text-white tw-ml-8"
+                  src={chevronUpImgSrc}
+                />
+              </div>
+              <div className="tw-w-full">
+                <img
+                  alt="Space holder"
+                  className="tw-text-white tw-ml-8"
+                  src={chevronDownImgSrc}
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            id="scrollElement"
+            className="tw-flex tw-flex-col tw-space-y-4 tw-overflow-scroll tw-h-96 scrollbar-hide scroll-smooth"
+          >
+            {filteredRoasts.map((roast) => (
+              <div
+                id={`roast-v-${roast.hrefId}`}
+                key={roast.id}
+                className="tw-w-64"
+              >
+                <BigSelectTypeTwo
+                  isCarousel
+                  id={roast.id}
+                  label={roast.label}
+                  handleSelection={(roastId) => handleSelectedRoastId(roastId)}
+                  selected={roast.id === selectedRoastId}
+                  subLabel={roast.subLabel}
+                  description={roast.description}
+                  imgSrc={roast.imgSrc}
+                />
+              </div>
+            ))}
+          </div>
+
+          <div className="tw-flex tw-justify-center tw-place-items-center ">
+            <div className="tw-flex-col">
+              <div className="tw-w-full">
+                <img
+                  onClick={() => scrollUp()}
+                  alt="Chevron or Arrow Down"
+                  className="tw-text-white tw-ml-8"
+                  src={chevronUpImgSrc}
+                />
+              </div>
+              <div className="tw-w-full">
+                <img
+                  onClick={() => scrollDown()}
+                  alt="Chevron or Arrow Down"
+                  className="tw-text-white tw-ml-8"
+                  src={chevronDownImgSrc}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className="tw-w-full tw-relative">
       {filteredRoasts.map((roast) => (
         <a
           className="tw-text-white tw-absolute tw-top-0 tw-hidden"
-          id={`roast-href-${roast.hrefId}`}
-          href={`#roast-${roast.hrefId}`}
+          id={`roast-h-href-${roast.hrefId}`}
+          href={`#roast-h-${roast.hrefId}`}
+        >
+          roast href {roast.hrefId}
+        </a>
+      ))}
+      {filteredRoasts.map((roast) => (
+        <a
+          className="tw-text-white tw-absolute tw-top-0 tw-hidden"
+          id={`roast-v-href-${roast.hrefId}`}
+          href={`#roast-v-${roast.hrefId}`}
         >
           roast href {roast.hrefId}
         </a>
@@ -149,16 +227,9 @@ const Roast = (props) => {
         <div className="text-highlight-500 tw-py-4">SELECT YOUR ROAST</div>
       </div>
 
-      {horizontalScroll()}
+      <div className=" tw-hidden md:tw-block ">{horizontalScroll()}</div>
 
-      {/* <input
-        type="range"
-        min="1"
-        max={filteredRoastsCount}
-        value="50"
-        className="slider"
-        id="myRange"
-      ></input> */}
+      <div className=" tw-block md:tw-hidden">{mobileVerticalScroll()}</div>
     </div>
   )
 }

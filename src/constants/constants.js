@@ -42,87 +42,80 @@ export const textures = [
   //   imgSrc:
   //     'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/subscription-slider_rounds_400x400.png',
   // },
-];
+]
 
 export const roasts = [
   {
     id: 1,
-    value: 40460851019952, 
+    value: 40460851019952,
     type: 'ground-roast',
     label: 'Coffee',
     subLabel: 'LIGHT',
-    description:
-      'Test Coffee',
+    description: 'Test Coffee',
     imgSrc:
       'https://cdn.shopify.com/s/files/1/0595/7478/0080/t/1/assets/new-coffee3.jpeg?v=4151718430318245096',
   },
   {
     id: 2,
-    value: 40460851019952, 
+    value: 40460851019952,
     type: 'ground-roast',
     label: 'Coffee',
     subLabel: 'LIGHT',
-    description:
-      'Test Coffee',
+    description: 'Test Coffee',
     imgSrc:
       'https://cdn.shopify.com/s/files/1/0595/7478/0080/t/1/assets/new-coffee3.jpeg?v=4151718430318245096',
   },
   {
     id: 3,
-    value: 40460851019952, 
+    value: 40460851019952,
     type: 'ground-roast',
     label: 'Coffee',
     subLabel: 'MEDIUM',
-    description:
-      'Test Coffee',
+    description: 'Test Coffee',
     imgSrc:
       'https://cdn.shopify.com/s/files/1/0595/7478/0080/t/1/assets/new-coffee3.jpeg?v=4151718430318245096',
   },
   {
     id: 4,
-    value: 40460851019952, 
+    value: 40460851019952,
     type: 'whole-roast',
     label: 'Coffee',
     subLabel: 'LIGHT',
-    description:
-      'Test Coffee',
+    description: 'Test Coffee',
     imgSrc:
       'https://cdn.shopify.com/s/files/1/0595/7478/0080/t/1/assets/new-coffee3.jpeg?v=4151718430318245096',
   },
   {
     id: 5,
-    value: 40460851019952, 
+    value: 40460851019952,
     type: 'whole-roast',
     label: 'Coffee',
     subLabel: 'LIGHT',
-    description:
-      'Test Coffee',
+    description: 'Test Coffee',
     imgSrc:
       'https://cdn.shopify.com/s/files/1/0595/7478/0080/t/1/assets/new-coffee3.jpeg?v=4151718430318245096',
   },
   {
     id: 6,
-    value: 40460851019952, 
+    value: 40460851019952,
     type: 'whole-roast',
     label: 'Coffee',
     subLabel: 'MEDIUM',
-    description:
-      'Test Coffee',
+    description: 'Test Coffee',
     imgSrc:
       'https://cdn.shopify.com/s/files/1/0595/7478/0080/t/1/assets/new-coffee3.jpeg?v=4151718430318245096',
   },
   {
     id: 7,
-    value: 40460851019952, 
+    value: 40460851019952,
     type: 'rounds-roast',
     label: 'Coffee',
     subLabel: 'LIGHT',
-    description:
-      "Test Coffee",
+    description: 'Test Coffee',
     imgSrc:
       'https://cdn.shopify.com/s/files/1/0595/7478/0080/t/1/assets/new-coffee3.jpeg?v=4151718430318245096',
   },
-];
+]
 
 export const summarySteps = [
   {
@@ -160,7 +153,7 @@ export const summarySteps = [
     initImgSrc:
       'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/coffeeClubSignUp_step6_200x200.png',
   },
-];
+]
 
 export const quantities = [
   {
@@ -195,7 +188,7 @@ export const quantities = [
     imgSrc:
       'https://cdn.shopify.com/s/files/1/0595/7478/0080/t/1/assets/new-coffee3.jpeg?v=4151718430318245096',
   },
-];
+]
 
 export const frequencies = [
   {
@@ -226,12 +219,16 @@ export const frequencies = [
     centerLabel: '60',
     centerLabelSub: 'DAYS',
   },
-];
+]
 
 export const chevronRightImgSrc =
-  'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/chevron_right_white_24dp.svg';
+  'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/chevron_right_white_24dp.svg'
+
 export const chevronLeftImgSrc =
-  'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/chevron_left_white_24dp.svg';
+  'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/chevron_left_white_24dp.svg'
 
+export const chevronUpImgSrc =
+  'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/chevron_up_white_24dp.svg'
 
-  
+export const chevronDownImgSrc =
+  'https://subscription-images-cdn-mrlkc.ondigitalocean.app/assets/chevron_down_white_24dp.svg'

@@ -138,7 +138,7 @@ const App = () => {
       <div id="csw">
         {/* <div className="tw-w-full h-min-64 bg-dark-700 tw-pt-4 tw-pb-8"> */}
         {/* <div className="tw-w-full h-min-64 bg-dark-700 tw-pt-4 tw-pb-32"></div> */}
-        <div className="tw-w-full h-min-64 tw-bg-gray-300 tw-pt-4 tw-pb-32">
+        <div className="tw-w-full h-min-64 tw-bg-blue-900 tw-pt-4 tw-pb-32">
           <div className="tw-flex tw-justify-between tw-w-full tw-px-4">
             <img
               alt="Chevron or Arrow Left"
