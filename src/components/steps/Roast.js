@@ -161,7 +161,7 @@ const Roast = (props) => {
             {filteredRoasts.map((roast) => (
               <div
                 id={`roast-v-${roast.hrefId}`}
-                key={roast.id}
+                key={roast.hrefId}
                 className="tw-w-64"
               >
                 <BigSelectTypeTwo
@@ -209,6 +209,7 @@ const Roast = (props) => {
         <a
           className="tw-text-white tw-absolute tw-top-0 tw-hidden"
           id={`roast-h-href-${roast.hrefId}`}
+          key={roast.hrefId}
           href={`#roast-h-${roast.hrefId}`}
         >
           roast href {roast.hrefId}
@@ -218,6 +219,7 @@ const Roast = (props) => {
         <a
           className="tw-text-white tw-absolute tw-top-0 tw-hidden"
           id={`roast-v-href-${roast.hrefId}`}
+          key={roast.hrefId}
           href={`#roast-v-${roast.hrefId}`}
         >
           roast href {roast.hrefId}
