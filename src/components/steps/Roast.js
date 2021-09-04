@@ -159,10 +159,11 @@ const Roast = (props) => {
             className="tw-flex tw-flex-col tw-space-y-4 tw-overflow-scroll tw-h-96 scrollbar-hide scroll-smooth"
           >
             {filteredRoasts.map((roast) => (
+              // TODO decide to keep or not className="tw-w-64"
               <div
                 id={`roast-v-${roast.hrefId}`}
                 key={roast.hrefId}
-                className="tw-w-64"
+                className="max-w-64 min-w-48  tw-w-full"
               >
                 <BigSelectTypeTwo
                   isCarousel

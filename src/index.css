@@ -61,3 +61,15 @@
 #csw .scroll-smooth {
   scroll-behavior: smooth;
 }
+
+#csw .max-w-64 {
+  max-width: 16rem;
+}
+
+#csw .min-w-48 {
+  min-width: 12rem;
+}
+
+#csw .min-w-mobile {
+  min-width: 320px !important;
+}

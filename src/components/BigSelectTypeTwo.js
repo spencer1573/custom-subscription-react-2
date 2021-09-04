@@ -26,7 +26,7 @@ const BigSelect = (props) => {
           : 'tw-border tw-border-light-300'
       } ${isCarousel ? 'tw-w-64 tw-h-full' : ''} ${
         newResponsive ? 'tw-h-full' : ''
-      } bg-dark-400 bg-red-200  tw-rounded tw-border-solid  hover:border-highlight-400 tw-p-4`}
+      } bg-dark-400 tw-bg-red-200  tw-rounded tw-border-solid  hover:border-highlight-400 tw-p-4`}
     >
       <div className="tw-flex tw-justify-center tw-w-full bg-red-200">
         <div className="tw-text-white">{label}</div>
