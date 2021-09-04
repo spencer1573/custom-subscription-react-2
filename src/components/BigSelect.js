@@ -29,7 +29,7 @@ const BigSelect = (props) => {
       } bg-dark-400 tw-rounded  tw-border-solid  hover:border-highlight-400 tw-p-4 tw-relative`}
     >
       <div className="tw-flex tw-justify-center tw-w-full">
-        <div className="tw-text-white">{label}</div>
+        <div className="tw-text-white tw-text-center">{label}</div>
       </div>
       {centerLabel && (
         <div className="tw-absolute tw-flex tw-justify-center tw-place-items-center tw-h-full tw-w-full tw-top-0 tw-right-0">

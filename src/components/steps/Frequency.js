@@ -21,7 +21,7 @@ const Frequency = (props) => {
           </div>
         </div>
         <div className="tw-flex tw-justify-center tw-w-full">
-          <div className="tw-grid tw-gap-x-4 tw-grid-cols-4">
+          <div className="tw-grid tw-gap-y-4 tw-grid-cols-1 md:tw-grid-cols-4 md:tw-gap-x-4 tw-mx-4">
             {frequencies.map((frequency) => (
               <BigSelect
                 setToFortyEight
