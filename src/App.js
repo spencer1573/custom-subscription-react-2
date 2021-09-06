@@ -29,6 +29,7 @@ const App = () => {
 
   const [pageId, setPageId] = useState(1)
   const [selectedStepsInfo, setSelectedStepsInfo] = useState({})
+  const [currentNextUnselectedPage, setCurrentNextUnselectedPage] = useState(0)
 
   const selectedTextureObject = useMemo(
     () => textures.find((texture) => texture.id === selectedTextureId),
@@ -53,7 +54,7 @@ const App = () => {
   // IMPORTANT must change if you adjust summarySteps
   const lastStepPageId = 5
 
-  const currentNextUnselectedPage = useMemo(() => {
+  const currentNextUnselectedPageMemo = useMemo(() => {
     const setKeys = Object.keys(selectedStepsInfo)
     if (setKeys.length > 0) {
       setKeys.map((key) => {
@@ -70,6 +71,14 @@ const App = () => {
       return 1
     }
   }, [selectedStepsInfo])
+
+  useEffect(() => {
+    if (currentNextUnselectedPageMemo !== currentNextUnselectedPage) {
+      setCurrentNextUnselectedPage(currentNextUnselectedPageMemo)
+    }
+  }, [currentNextUnselectedPageMemo])
+
+  console.log('some leak?')
 
   useEffect(() => {
     if (selectedTextureObject) {
@@ -133,6 +142,8 @@ const App = () => {
         setPageId,
         selectedStepsInfo,
         setSelectedStepsInfo,
+        currentNextUnselectedPage,
+        setCurrentNextUnselectedPage,
       }}
     >
       <div id="csw">
