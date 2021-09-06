@@ -127,6 +127,20 @@ const App = () => {
   //   console.log('selected steps info ', selectedStepsInfo)
   // })
 
+  const handlePageLeft = () => {
+    console.log('page left handle')
+    if (pageId > 1) {
+      setPageId(pageId - 1)
+    }
+  }
+
+  const handlePageRight = () => {
+    console.log('page right handle')
+    if (currentNextUnselectedPage > pageId) {
+      setPageId(pageId + 1)
+    }
+  }
+
   return (
     <UserContext.Provider
       value={{
@@ -152,6 +166,7 @@ const App = () => {
         <div className="tw-w-full h-min-64 tw-bg-blue-900 tw-pt-4 tw-pb-32 min-w-mobile">
           <div className="tw-block md:tw-hidden tw-flex tw-justify-between tw-w-full tw-px-4">
             <img
+              onClick={() => handlePageLeft()}
               alt="Chevron or Arrow Left"
               className="tw-text-white"
               src={chevronLeftImgSrc}
@@ -160,6 +175,7 @@ const App = () => {
               STEP {pageId} / {lastStepPageId}
             </div>
             <img
+              onClick={() => handlePageRight()}
               alt="Chevron or Arrow Right"
               className="tw-text-white"
               src={chevronRightImgSrc}
