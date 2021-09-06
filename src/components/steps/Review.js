@@ -6,7 +6,8 @@ import { UserContext } from '../../App.js'
 import $ from 'jquery'
 
 const Review = (props) => {
-  const { selectedStepsInfo } = useContext(UserContext)
+  const { selectedStepsInfo, setSelectedStepsInfo, setPageId } =
+    useContext(UserContext)
 
   /* EXIT EARLY - if there's a problem with the steps */
   if (Object.keys(selectedStepsInfo).length > 3) {
@@ -47,6 +48,11 @@ const Review = (props) => {
         window.location.href = '/cart'
       },
     })
+  }
+
+  const startOver = () => {
+    setSelectedStepsInfo({})
+    setPageId(1)
   }
 
   return (
@@ -119,7 +125,7 @@ const Review = (props) => {
               {/* </div> */}
             </div>
           </div>
-          <div className="tw-flex tw-justify-center tw-place-items-center tw-pt-24 tw-w-full">
+          <div className="tw-flex tw-justify-center tw-place-items-center tw-pt-24 tw-w-full tw-mb-2">
             <button
               type="button"
               className="tw-inline-flex tw-items-center tw-px-3 tw-py-2 tw-border tw-border-transparent tw-text-sm tw-leading-4 tw-font-medium tw-rounded-md tw-shadow-sm tw-text-black tw-bg-yellow-300 hover:tw-bg-yellow-400 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-yellow-400"
@@ -127,6 +133,14 @@ const Review = (props) => {
             >
               Add To Cart
             </button>
+          </div>
+          <div className="tw-flex tw-justify-center">
+            <div
+              onClick={() => startOver()}
+              className="tw-underline tw-text-white tw-text-xs"
+            >
+              START OVER
+            </div>
           </div>
         </div>
       </div>
