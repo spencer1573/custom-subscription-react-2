@@ -22,6 +22,10 @@
   color: #ffb711;
 }
 
+#csw .underline-highlight {
+  text-decoration-color: #ffb711 !important;
+}
+
 /* BORDER THINGS */
 /*
  #csw .border-solid {

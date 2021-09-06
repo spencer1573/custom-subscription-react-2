@@ -29,6 +29,19 @@ const StepsSummary = (props) => {
     }
   }
 
+  const stepSelectionComplete = (stepId) => {
+    const selectedObject = selectedStepsInfo[stepId]
+    console.log('selected Object ', selectedObject)
+    console.log('selected Object ', !!selectedObject)
+    return !!selectedObject
+  }
+
+  const onThisCurrentStep = (stepId) => {
+    console.log('step id ', stepId)
+    console.log('page id ', pageId)
+    return pageId === stepId
+  }
+
   return (
     <div className="tw-w-full bg-dark-900">
       <div className="tw-flex tw-justify-center tw-w-full tw-pt-4 tw-pb-8 ">
@@ -41,6 +54,8 @@ const StepsSummary = (props) => {
               label={step.label}
               initImgSrc={step.initImgSrc}
               centerLabel={step.centerLabel}
+              stepSelectionComplete={stepSelectionComplete(step.id)}
+              onThisCurrentStep={onThisCurrentStep(step.id)}
             />
           ))}
           <div className=" tw-px-4 tw-flex tw-place-items-center ">

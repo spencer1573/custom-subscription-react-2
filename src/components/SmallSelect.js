@@ -3,8 +3,16 @@ import { string } from 'prop-types'
 import { UserContext } from '../App'
 
 const SmallSelect = (props) => {
-  const { initImgSrc, label, centerLabel, pageId } = props
-  const { selectedStepsInfo, setPageId } = useContext(UserContext)
+  const {
+    initImgSrc,
+    label,
+    centerLabel,
+    pageId,
+    stepSelectionComplete,
+    onThisCurrentStep,
+  } = props
+  const { selectedStepsInfo, setPageId, currentNextUnselectedPage } =
+    useContext(UserContext)
 
   // console.log(
   //   'selectedSteps info ',
@@ -29,13 +37,18 @@ const SmallSelect = (props) => {
   // const selectedImage={selectedStepsInfo[step.id]?.imgSrc ?? undefined}
 
   const handleSetPageId = (pageId) => {
-    // console.log('page id ', pageId)
-    setPageId(pageId)
+    if (currentNextUnselectedPage >= pageId) {
+      setPageId(pageId)
+    }
   }
 
   return (
     <div onClick={() => handleSetPageId(pageId)} className="tw-h-full">
-      <div className="tw-h-full tw-relative bg-dark-400 tw-rounded tw-border tw-border-solid tw-border-light-300 hover:border-highlight-400 ">
+      <div
+        className={`${
+          stepSelectionComplete && 'border-highlight-400'
+        } tw-h-full tw-relative bg-dark-400 tw-rounded tw-border tw-border-solid tw-border-light-300`}
+      >
         <div className="tw-flex tw-justify-center tw-place-items-center tw-w-full tw-h-full">
           <img
             alt={label}
@@ -49,7 +62,13 @@ const SmallSelect = (props) => {
         </div>
       </div>
       <div className="tw-flex tw-justify-center tw-w-full">
-        <div className="tw-text-white">{label}</div>
+        <div
+          className={`${
+            onThisCurrentStep && 'tw-underline underline-highlight'
+          } tw-text-white`}
+        >
+          {label}
+        </div>
       </div>
     </div>
   )
