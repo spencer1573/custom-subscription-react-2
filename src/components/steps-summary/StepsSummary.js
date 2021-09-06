@@ -31,12 +31,6 @@ const StepsSummary = (props) => {
 
   return (
     <div className="tw-w-full bg-dark-900">
-      {/* <div>value: {value}</div> */}
-
-      <pre className="tw-text-white">{currentNextUnselectedPage}</pre>
-      <br />
-      <pre className="tw-text-white">{pageId}</pre>
-
       <div className="tw-flex tw-justify-center tw-w-full tw-pt-4 tw-pb-8 ">
         <div className="tw-grid tw-gap-x-4 lg:tw-gap-x-8 tw-grid-cols-6 ">
           {/* <SmallSelect /> */}
