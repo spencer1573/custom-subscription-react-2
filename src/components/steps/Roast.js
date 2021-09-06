@@ -138,7 +138,7 @@ const Roast = (props) => {
         <div className="tw-flex tw-justify-center tw-w-full">
           <div className="tw-invisible tw-flex tw-bg-red-200 tw-justify-center tw-place-items-center ">
             <div className="tw-flex-col">
-              <div className="tw-w-full">
+              <div className="tw-w-full ">
                 <img
                   alt="Space holder"
                   className="tw-text-white tw-ml-8"
@@ -185,7 +185,7 @@ const Roast = (props) => {
                 <img
                   onClick={() => scrollUp()}
                   alt="Chevron or Arrow Down"
-                  className="tw-text-white tw-ml-8"
+                  className="tw-text-white tw-ml-8 tw-mb-8"
                   src={chevronUpImgSrc}
                 />
               </div>

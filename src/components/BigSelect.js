@@ -13,13 +13,14 @@ const BigSelect = (props) => {
     centerLabel,
     centerLabelSub,
     setToFortyEight,
+    disableSelect,
   } = props
 
   const newResponsive = true
 
   return (
     <div
-      onClick={() => handleSelection(id)}
+      onClick={() => !disableSelect && handleSelection(id)}
       className={`${
         selected
           ? 'tw-border-2 border-highlight-400'

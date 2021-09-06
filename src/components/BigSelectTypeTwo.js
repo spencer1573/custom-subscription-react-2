@@ -11,6 +11,7 @@ const BigSelect = (props) => {
     id,
     selected,
     isCarousel,
+    disableSelect,
   } = props
 
   const newResponsive = true
@@ -19,7 +20,7 @@ const BigSelect = (props) => {
   // isCarousel ? 'tw-w-64 tw-h-full' : 'tw-flex tw-place-items-center'
   return (
     <div
-      onClick={() => handleSelection(id)}
+      onClick={() => !disableSelect && handleSelection(id)}
       className={` ${
         selected
           ? 'tw-border-2 border-highlight-400'

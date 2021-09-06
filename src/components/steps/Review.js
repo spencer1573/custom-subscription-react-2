@@ -69,6 +69,7 @@ const Review = (props) => {
                   selected={true}
                   label={texture.label}
                   imgSrc={texture.imgSrc}
+                  disableSelect={true}
                 ></BigSelect>
               </div>
               {/* </div> */}
@@ -82,6 +83,7 @@ const Review = (props) => {
                   subLabel={roast.subLabel}
                   description={roast.description}
                   imgSrc={roast.imgSrc}
+                  disableSelect={true}
                 ></BigSelectTypeTwo>
               </div>
               {/* <div className="tw-w-64 tw-object-contain"> */}
@@ -95,6 +97,7 @@ const Review = (props) => {
                   imgSrc={quantity.imgSrc}
                   description={quantity.description}
                   descriptionLabel={quantity.descriptionLabel}
+                  disableSelect={true}
                 ></BigSelect>
               </div>
               {/* </div> */}
@@ -109,6 +112,7 @@ const Review = (props) => {
                   label={frequency.label}
                   centerLabel={frequency.centerLabel}
                   centerLabelSub={frequency.centerLabelSub}
+                  disableSelect={true}
                 ></BigSelect>
               </div>
               {/* </div> */}
