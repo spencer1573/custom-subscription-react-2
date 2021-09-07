@@ -1,13 +1,25 @@
-import React, { Fragment, useContext } from 'react'
+import React, { Fragment, useContext, useMemo } from 'react'
 import BigSelect from '../BigSelect'
 import BigSelectTypeTwo from '../BigSelectTypeTwo'
-// import { string } from 'prop-types';
 import { UserContext } from '../../App.js'
+import {
+  textures,
+  roasts,
+  quantities,
+  frequencies,
+} from '../../constants/constants'
 import $ from 'jquery'
 
 const Review = (props) => {
-  const { selectedStepsInfo, setSelectedStepsInfo, setPageId } =
-    useContext(UserContext)
+  const {
+    selectedStepsInfo,
+    setSelectedStepsInfo,
+    setPageId,
+    setSelectedTextureId,
+    setSelectedRoastId,
+    setSelectedQuantityId,
+    setSelectedFrequencyId,
+  } = useContext(UserContext)
 
   /* EXIT EARLY - if there's a problem with the steps */
   if (Object.keys(selectedStepsInfo).length > 3) {
@@ -19,7 +31,10 @@ const Review = (props) => {
     )
   }
 
-  const texture = selectedStepsInfo['1'] ?? {}
+  const texture = useMemo(
+    () => selectedStepsInfo['1'] ?? {},
+    [selectedStepsInfo]
+  )
   const roast = selectedStepsInfo['2'] ?? {}
   const quantity = selectedStepsInfo['3'] ?? {}
   const frequency = selectedStepsInfo['4'] ?? {}
@@ -55,6 +70,45 @@ const Review = (props) => {
     setPageId(1)
   }
 
+  // const setFunctions = () => {
+  //   'texture': setSelectedTextureId(val),
+  // }
+
+  const handleDropdownOnChange = (value, setCode) => {
+    console.log('value', value)
+    console.log('set code ', setCode)
+    if (setCode === 'texture') {
+      setSelectedTextureId(value)
+    }
+  }
+
+  const dropdown = (selectionsRaw, selectedObject, setCode) => {
+    console.log('selection object', selectedObject)
+    console.log('selected object ', selectedObject.id)
+    console.log('selections ', selectionsRaw)
+
+    const selections = [...selectionsRaw]
+
+    console.log('selections ', selections)
+
+    return (
+      <div className="tw-flex tw-justify-center tw-mt-4">
+        <select
+          value={selectedObject.id}
+          onChange={(e) => handleDropdownOnChange(e.target.value, setCode)}
+          name="selection"
+        >
+          {/* <option value="">--no selection--</option> */}
+          {selections.map((selection) => (
+            <option key={selection.id} value={selection.id}>
+              {selection.label}
+            </option>
+          ))}
+        </select>
+      </div>
+    )
+  }
+
   return (
     <Fragment>
       <div className="tw-w-full tw-flex tw-justify-center">
@@ -77,6 +131,7 @@ const Review = (props) => {
                   imgSrc={texture.imgSrc}
                   disableSelect={true}
                 ></BigSelect>
+                {dropdown(textures, texture, 'texture')}
               </div>
               {/* </div> */}
               {/* <div className="tw-w-64 tw-object-contain"> */}
@@ -91,6 +146,7 @@ const Review = (props) => {
                   imgSrc={roast.imgSrc}
                   disableSelect={true}
                 ></BigSelectTypeTwo>
+                {/* {dropdown(roasts, roast, 2)} */}
               </div>
               {/* <div className="tw-w-64 tw-object-contain"> */}
               {/* <div className="tw-h-48 tw-object-fit"> */}
@@ -105,6 +161,7 @@ const Review = (props) => {
                   descriptionLabel={quantity.descriptionLabel}
                   disableSelect={true}
                 ></BigSelect>
+                {/* {dropdown(quantities, quantity, 3)} */}
               </div>
               {/* </div> */}
               {/* <div className="tw-w-64 tw-object-contain"> */}
@@ -120,6 +177,7 @@ const Review = (props) => {
                   centerLabelSub={frequency.centerLabelSub}
                   disableSelect={true}
                 ></BigSelect>
+                {/* {dropdown(frequencies, frequency, 4)} */}
               </div>
               {/* </div> */}
               {/* </div> */}
