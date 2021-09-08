@@ -21,16 +21,6 @@ const Review = (props) => {
     setSelectedFrequencyId,
   } = useContext(UserContext)
 
-  /* EXIT EARLY - if there's a problem with the steps */
-  if (Object.keys(selectedStepsInfo).length > 3) {
-  } else {
-    return (
-      <div className="tw-h-full tw-w-full tw-flex tw-justify-center tw-place-items-center">
-        <div>Error in steps</div>
-      </div>
-    )
-  }
-
   const texture = useMemo(
     () => selectedStepsInfo['1'] ?? {},
     [selectedStepsInfo]
@@ -75,10 +65,9 @@ const Review = (props) => {
   // }
 
   const handleDropdownOnChange = (value, setCode) => {
-    console.log('value', value)
-    console.log('set code ', setCode)
     if (setCode === 'texture') {
-      setSelectedTextureId(value)
+      const valueInt = parseInt(value, 10)
+      setSelectedTextureId(valueInt)
     }
   }
 
@@ -105,6 +94,16 @@ const Review = (props) => {
             </option>
           ))}
         </select>
+      </div>
+    )
+  }
+
+  /* EXIT EARLY - if there's a problem with the steps */
+  if (Object.keys(selectedStepsInfo).length > 3) {
+  } else {
+    return (
+      <div className="tw-h-full tw-w-full tw-flex tw-justify-center tw-place-items-center">
+        <div>Error in steps</div>
       </div>
     )
   }
