@@ -9,25 +9,31 @@ import {
   chevronDownImgSrc,
 } from '../../constants/constants'
 
+// import { filterRoasts } from '../../common/common'
+
 const Roast = (props) => {
-  const { selectedTextureId, selectedRoastId, setSelectedRoastId } =
-    useContext(UserContext)
+  const {
+    selectedRoastId,
+    setSelectedRoastId,
+    selectedFlagId,
+    setSelectedIdFlag,
+  } = useContext(UserContext)
 
   let filteredRoasts = []
 
-  if (selectedTextureId === 1) {
-    filteredRoasts = roasts.filter((roast) => {
-      return roast.type === 'ground-roast'
-    })
-  } else if (selectedTextureId === 2) {
-    filteredRoasts = roasts.filter((roast) => {
-      return roast.type === 'whole-roast'
-    })
-  } else if (selectedTextureId === 3) {
-    filteredRoasts = roasts.filter((roast) => {
-      return roast.type === 'rounds-roast'
-    })
-  }
+  // if (selectedTextureId === 1) {
+  //   filteredRoasts = roasts.filter((roast) => {
+  //     return roast.type === 'ground-roast'
+  //   })
+  // } else if (selectedTextureId === 2) {
+  //   filteredRoasts = roasts.filter((roast) => {
+  //     return roast.type === 'whole-roast'
+  //   })
+  // } else if (selectedTextureId === 3) {
+  //   filteredRoasts = roasts.filter((roast) => {
+  //     return roast.type === 'rounds-roast'
+  //   })
+  // }
 
   const [visibleHorizontalRoastId, setVisibleHorizontalRoastId] = useState(1)
   const [visibleVerticalRoastId, setVisibleVerticalRoastId] = useState(1)
@@ -46,8 +52,8 @@ const Roast = (props) => {
   const middleRoastNumber = roasts
 
   const handleSelectedRoastId = (roastId) => {
-    console.log('roast id ', roastId)
     setSelectedRoastId(roastId)
+    setSelectedIdFlag(selectedFlagId)
   }
 
   const scrollRight = async () => {
@@ -124,7 +130,7 @@ const Roast = (props) => {
 
         <img
           onClick={() => scrollRight()}
-          alt="Chevron or Arrow Right"
+          alt="Chevron or Arrowstart over issue Right"
           className="tw-text-white tw-ml-8"
           src={chevronRightImgSrc}
         />

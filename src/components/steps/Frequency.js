@@ -5,11 +5,16 @@ import { UserContext } from '../../App.js'
 import { frequencies } from '../../constants/constants'
 
 const Frequency = (props) => {
-  const { selectedFrequencyId, setSelectedFrequencyId } =
-    useContext(UserContext)
+  const {
+    selectedFrequencyId,
+    setSelectedFrequencyId,
+    setSelectedIdFlag,
+    selectedIdFlag,
+  } = useContext(UserContext)
 
   const handleFrequencySelection = (id) => {
     setSelectedFrequencyId(id)
+    setSelectedIdFlag(!selectedIdFlag)
   }
 
   return (

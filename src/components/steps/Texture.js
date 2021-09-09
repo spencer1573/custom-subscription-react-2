@@ -5,10 +5,16 @@ import { UserContext } from '../../App.js'
 import { textures } from '../../constants/constants'
 
 const Texture = (props) => {
-  const { setSelectedTextureId, selectedTextureId } = useContext(UserContext)
+  const {
+    setSelectedTextureId,
+    selectedTextureId,
+    selectedIdFlag,
+    setSelectedIdFlag,
+  } = useContext(UserContext)
 
   const handleTextureSelection = (id) => {
     setSelectedTextureId(id)
+    setSelectedIdFlag(!selectedIdFlag)
   }
 
   return (

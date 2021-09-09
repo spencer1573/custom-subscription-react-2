@@ -44,12 +44,27 @@ export const textures = [
   // },
 ]
 
+export const roastTypes = [
+  {
+    id: 1,
+    type: 'ground-roast',
+  },
+  {
+    id: 2,
+    type: 'whole-roast',
+  },
+  {
+    id: 3,
+    type: 'rounds-roast',
+  },
+]
+
 export const roasts = [
   {
     id: 1,
     value: 40460851019952,
-    type: 'ground-roast',
-    label: 'Coffee',
+    typeId: 1,
+    label: 'Coffee 1',
     subLabel: 'LIGHT',
     description: 'Test Coffee',
     imgSrc:
@@ -58,8 +73,8 @@ export const roasts = [
   {
     id: 2,
     value: 40460851019952,
-    type: 'ground-roast',
-    label: 'Coffee',
+    typeId: 1,
+    label: 'Coffee 2',
     subLabel: 'LIGHT',
     description: 'Test Coffee',
     imgSrc:
@@ -68,8 +83,8 @@ export const roasts = [
   {
     id: 3,
     value: 40460851019952,
-    type: 'ground-roast',
-    label: 'Coffee',
+    typeId: 1,
+    label: 'Coffee 3',
     subLabel: 'MEDIUM',
     description: 'Test Coffee',
     imgSrc:
@@ -78,8 +93,8 @@ export const roasts = [
   {
     id: 4,
     value: 40460851019952,
-    type: 'whole-roast',
-    label: 'Coffee',
+    typeId: 2,
+    label: 'Coffee 4',
     subLabel: 'LIGHT',
     description: 'Test Coffee',
     imgSrc:
@@ -88,8 +103,8 @@ export const roasts = [
   {
     id: 5,
     value: 40460851019952,
-    type: 'whole-roast',
-    label: 'Coffee',
+    typeId: 2,
+    label: 'Coffee 5',
     subLabel: 'LIGHT',
     description: 'Test Coffee',
     imgSrc:
@@ -98,8 +113,8 @@ export const roasts = [
   {
     id: 6,
     value: 40460851019952,
-    type: 'whole-roast',
-    label: 'Coffee',
+    typeId: 2,
+    label: 'Coffee 6',
     subLabel: 'MEDIUM',
     description: 'Test Coffee',
     imgSrc:
@@ -108,8 +123,8 @@ export const roasts = [
   {
     id: 7,
     value: 40460851019952,
-    type: 'rounds-roast',
-    label: 'Coffee',
+    typeId: 3,
+    label: 'Coffee 7',
     subLabel: 'LIGHT',
     description: 'Test Coffee',
     imgSrc:

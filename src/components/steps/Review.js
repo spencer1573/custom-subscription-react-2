@@ -21,10 +21,7 @@ const Review = (props) => {
     setSelectedFrequencyId,
   } = useContext(UserContext)
 
-  const texture = useMemo(
-    () => selectedStepsInfo['1'] ?? {},
-    [selectedStepsInfo]
-  )
+  const texture = selectedStepsInfo['1'] ?? {}
   const roast = selectedStepsInfo['2'] ?? {}
   const quantity = selectedStepsInfo['3'] ?? {}
   const frequency = selectedStepsInfo['4'] ?? {}
@@ -57,24 +54,32 @@ const Review = (props) => {
 
   const startOver = () => {
     setSelectedStepsInfo({})
+    setSelectedTextureId(0)
+    setSelectedRoastId(0)
+    setSelectedQuantityId(0)
+    setSelectedFrequencyId(0)
     setPageId(1)
   }
 
-  // const setFunctions = () => {
-  //   'texture': setSelectedTextureId(val),
-  // }
-
+  // I Know there is a better way do do this
+  // but i'm not quite sure what it is
   const handleDropdownOnChange = (value, setCode) => {
+    const valueInt = parseInt(value, 10)
     if (setCode === 'texture') {
-      const valueInt = parseInt(value, 10)
       setSelectedTextureId(valueInt)
+    } else if (setCode === 'roast') {
+      setSelectedRoastId(valueInt)
+    } else if (setCode === 'quantity') {
+      setSelectedQuantityId(valueInt)
+    } else if (setCode === 'frequency') {
+      setSelectedFrequencyId(valueInt)
     }
   }
 
   const dropdown = (selectionsRaw, selectedObject, setCode) => {
-    console.log('selection object', selectedObject)
-    console.log('selected object ', selectedObject.id)
-    console.log('selections ', selectionsRaw)
+    // console.log('selection object', selectedObject)
+    // console.log('selected object ', selectedObject.id)
+    // console.log('selections ', selectionsRaw)
 
     const selections = [...selectionsRaw]
 
@@ -145,6 +150,7 @@ const Review = (props) => {
                   imgSrc={roast.imgSrc}
                   disableSelect={true}
                 ></BigSelectTypeTwo>
+                {dropdown(roasts, roast, 'roast')}
                 {/* {dropdown(roasts, roast, 2)} */}
               </div>
               {/* <div className="tw-w-64 tw-object-contain"> */}
@@ -160,7 +166,7 @@ const Review = (props) => {
                   descriptionLabel={quantity.descriptionLabel}
                   disableSelect={true}
                 ></BigSelect>
-                {/* {dropdown(quantities, quantity, 3)} */}
+                {dropdown(quantities, quantity, 'quantity')}
               </div>
               {/* </div> */}
               {/* <div className="tw-w-64 tw-object-contain"> */}
@@ -176,7 +182,7 @@ const Review = (props) => {
                   centerLabelSub={frequency.centerLabelSub}
                   disableSelect={true}
                 ></BigSelect>
-                {/* {dropdown(frequencies, frequency, 4)} */}
+                {dropdown(frequencies, frequency, 'frequency')}
               </div>
               {/* </div> */}
               {/* </div> */}

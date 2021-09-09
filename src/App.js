@@ -27,6 +27,8 @@ const App = () => {
   const [selectedQuantityId, setSelectedQuantityId] = useState(0)
   const [selectedFrequencyId, setSelectedFrequencyId] = useState(0)
 
+  const [selectedIdFlag, setSelectedIdFlag] = useState(false)
+
   const [pageId, setPageId] = useState(1)
   const [selectedStepsInfo, setSelectedStepsInfo] = useState({})
   const [currentNextUnselectedPage, setCurrentNextUnselectedPage] = useState(0)
@@ -105,11 +107,18 @@ const App = () => {
   }, [selectedFrequencyObject])
 
   useEffect(() => {
+    console.log('selected id ', selectedIdFlag)
+  }, [selectedIdFlag])
+
+  // TODO #rm automatic change of page id
+  useEffect(() => {
+    console.log('selected id ', selectedIdFlag)
     if (
       selectedTextureId ||
       selectedRoastId ||
       selectedQuantityId ||
-      selectedFrequencyId
+      selectedFrequencyId ||
+      selectedIdFlag
     ) {
       setPageId(currentNextUnselectedPage)
     }
@@ -119,6 +128,7 @@ const App = () => {
     selectedRoastId,
     selectedQuantityId,
     selectedFrequencyId,
+    selectedIdFlag,
   ])
 
   // useEffect(() => {
@@ -152,6 +162,8 @@ const App = () => {
         setSelectedQuantityId,
         selectedFrequencyId,
         setSelectedFrequencyId,
+        selectedIdFlag,
+        setSelectedIdFlag,
         pageId,
         setPageId,
         selectedStepsInfo,

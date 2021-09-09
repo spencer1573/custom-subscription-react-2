@@ -5,10 +5,16 @@ import { UserContext } from '../../App.js'
 import { quantities } from '../../constants/constants'
 
 const Quantity = (props) => {
-  const { selectedQuantityId, setSelectedQuantityId } = useContext(UserContext)
+  const {
+    selectedQuantityId,
+    setSelectedQuantityId,
+    setSelectedIdFlag,
+    selectedIdFlag,
+  } = useContext(UserContext)
 
   const handleQuantitySelection = (id) => {
     setSelectedQuantityId(id)
+    setSelectedIdFlag(selectedIdFlag)
   }
 
   return (
