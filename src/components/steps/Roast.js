@@ -49,12 +49,16 @@ const Roast = (props) => {
 
   const filteredRoastsCount = roasts.length
 
-  const middleRoastNumber = roasts
+  const middleRoastNumber = parseInt(filteredRoastsCount / 2, 10)
 
   const handleSelectedRoastId = (roastId) => {
     setSelectedRoastId(roastId)
     setSelectedIdFlag(selectedFlagId)
   }
+
+  // useEffect(() => {
+  //   visibleHorizontalRoastId
+  // })
 
   const scrollRight = async () => {
     if (visibleHorizontalRoastId === 1 && filteredRoasts.length > 2) {
@@ -88,52 +92,74 @@ const Roast = (props) => {
   }
 
   useEffect(() => {
-    document.getElementById(`roast-h-href-${visibleHorizontalRoastId}`).click()
+    // const hrefHorizontalButton = document.getElementById(
+    //   `roast-h-href-${visibleHorizontalRoastId}`
+    // )
+    // hrefHorizontalButton &&
+    //   document
+    //     .getElementById(`roast-h-href-${visibleHorizontalRoastId}`)
+    //     .click()
+
+    window.location.href = `http://localhost:3000/#roast-h-${visibleHorizontalRoastId}`
   }, [visibleHorizontalRoastId])
 
   useEffect(() => {
-    document.getElementById(`roast-v-href-${visibleVerticalRoastId}`).click()
+    // document.getElementById(`roast-v-href-${visibleVerticalRoastId}`).click()
+    window.location.href = `http://localhost:3000/#roast-v-${visibleVerticalRoastId}`
   }, [visibleVerticalRoastId])
 
   const horizontalScroll = () => {
     return (
-      <div className="tw-flex tw-justify-center tw-w-full">
-        <img
-          onClick={() => scrollLeft()}
-          alt="Chevron or Arrow Left"
-          className="tw-text-white tw-mr-8"
-          src={chevronLeftImgSrc}
-        />
-        <div
-          id="scrollElement"
-          className="tw-flex tw-justify-between tw-space-x-4 tw-overflow-scroll tw-max-w-xl scrollbar-hide scroll-smooth"
-        >
-          {filteredRoasts.map((roast) => (
-            <div
-              id={`roast-h-${roast.hrefId}`}
-              key={roast.hrefId}
-              className="tw-w-64"
-            >
-              <BigSelectTypeTwo
-                isCarousel
-                id={roast.id}
-                label={roast.label}
-                handleSelection={(roastId) => handleSelectedRoastId(roastId)}
-                selected={roast.id === selectedRoastId}
-                subLabel={roast.subLabel}
-                description={roast.description}
-                imgSrc={roast.imgSrc}
-              />
-            </div>
-          ))}
-        </div>
+      <div>
+        <div className="tw-flex tw-justify-center tw-w-full">
+          <img
+            onClick={() => scrollLeft()}
+            alt="Chevron or Arrow Left"
+            className="tw-text-white tw-mr-8"
+            src={chevronLeftImgSrc}
+          />
+          <div
+            id="scrollElement"
+            className="tw-flex tw-justify-between tw-space-x-4 tw-overflow-scroll tw-max-w-xl scrollbar-hide scroll-smooth"
+          >
+            {filteredRoasts.map((roast) => (
+              <div
+                id={`roast-h-${roast.hrefId}`}
+                key={roast.hrefId}
+                className="tw-w-64"
+              >
+                <BigSelectTypeTwo
+                  isCarousel
+                  id={roast.id}
+                  label={roast.label}
+                  handleSelection={(roastId) => handleSelectedRoastId(roastId)}
+                  selected={roast.id === selectedRoastId}
+                  subLabel={roast.subLabel}
+                  description={roast.description}
+                  imgSrc={roast.imgSrc}
+                />
+              </div>
+            ))}
+          </div>
 
-        <img
-          onClick={() => scrollRight()}
-          alt="Chevron or Arrowstart over issue Right"
-          className="tw-text-white tw-ml-8"
-          src={chevronRightImgSrc}
-        />
+          <img
+            onClick={() => scrollRight()}
+            alt="Chevron or Arrowstart over issue Right"
+            className="tw-text-white tw-ml-8"
+            src={chevronRightImgSrc}
+          />
+        </div>
+        <div className="tw-flex tw-justify-center tw-place-items-center tw-w-full tw-pt-8">
+          <input
+            type="range"
+            min="1"
+            max={filteredRoastsCount}
+            value={visibleHorizontalRoastId}
+            onChange={(e) => setVisibleHorizontalRoastId(e.target.value)}
+            className="slider tw-max-w-xl tw-w-full"
+            id="myRange"
+          ></input>
+        </div>
       </div>
     )
   }
