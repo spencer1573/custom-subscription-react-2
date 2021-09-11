@@ -100,11 +100,14 @@ const Roast = (props) => {
     //     .getElementById(`roast-h-href-${visibleHorizontalRoastId}`)
     //     .click()
 
+    // TODO this needs to be done better and tested with shopify
+    // TODO put in react history
     window.location.href = `http://localhost:3000/#roast-h-${visibleHorizontalRoastId}`
   }, [visibleHorizontalRoastId])
 
   useEffect(() => {
     // document.getElementById(`roast-v-href-${visibleVerticalRoastId}`).click()
+    // TODO this needs to be done better and tested with shopify
     window.location.href = `http://localhost:3000/#roast-v-${visibleVerticalRoastId}`
   }, [visibleVerticalRoastId])
 
