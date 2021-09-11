@@ -9,6 +9,9 @@ import {
   chevronDownImgSrc,
 } from '../../constants/constants'
 
+// TODO possibply could remove with optimization
+import { withRouter } from 'react-router'
+
 // import { filterRoasts } from '../../common/common'
 
 const Roast = (props) => {
@@ -17,6 +20,8 @@ const Roast = (props) => {
     setSelectedRoastId,
     selectedFlagId,
     setSelectedIdFlag,
+    history,
+    location,
   } = useContext(UserContext)
 
   let filteredRoasts = []
@@ -102,7 +107,8 @@ const Roast = (props) => {
 
     // TODO this needs to be done better and tested with shopify
     // TODO put in react history
-    window.location.href = `http://localhost:3000/#roast-h-${visibleHorizontalRoastId}`
+    // window.location.href = `http://localhost:3000/#roast-h-${visibleHorizontalRoastId}`
+    history.push({ pathname: `/#roast-h-${visibleHorizontalRoastId}` })
   }, [visibleHorizontalRoastId])
 
   useEffect(() => {
@@ -272,4 +278,4 @@ const Roast = (props) => {
   )
 }
 
-export default Roast
+export default withRouter(Roast)
