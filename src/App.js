@@ -9,6 +9,8 @@ import Review from './components/steps/Review'
 /* SUMMARY OF STEPS */
 import StepsSummary from './components/steps-summary/StepsSummary'
 
+import { BrowserRouter } from 'react-router-dom'
+
 import {
   textures,
   roasts,
@@ -152,62 +154,64 @@ const App = () => {
   }
 
   return (
-    <UserContext.Provider
-      value={{
-        selectedTextureId,
-        setSelectedTextureId,
-        selectedRoastId,
-        setSelectedRoastId,
-        selectedQuantityId,
-        setSelectedQuantityId,
-        selectedFrequencyId,
-        setSelectedFrequencyId,
-        selectedIdFlag,
-        setSelectedIdFlag,
-        pageId,
-        setPageId,
-        selectedStepsInfo,
-        setSelectedStepsInfo,
-        currentNextUnselectedPage,
-        setCurrentNextUnselectedPage,
-      }}
-    >
-      <div id="csw">
-        {/* <div className="tw-w-full h-min-64 bg-dark-700 tw-pt-4 tw-pb-8"> */}
-        {/* <div className="tw-w-full h-min-64 bg-dark-700 tw-pt-4 tw-pb-32"></div> */}
-        <div className="tw-w-full h-min-64 tw-bg-blue-900 tw-pt-4 tw-pb-32 min-w-mobile">
-          <div className="tw-block md:tw-hidden tw-flex tw-justify-between tw-w-full tw-px-4">
-            <img
-              onClick={() => handlePageLeft()}
-              alt="Chevron or Arrow Left"
-              className="tw-text-white"
-              src={chevronLeftImgSrc}
-            />
-            <div className="tw-text-white">
-              STEP {pageId} / {lastStepPageId}
+    <BrowserRouter>
+      <UserContext.Provider
+        value={{
+          selectedTextureId,
+          setSelectedTextureId,
+          selectedRoastId,
+          setSelectedRoastId,
+          selectedQuantityId,
+          setSelectedQuantityId,
+          selectedFrequencyId,
+          setSelectedFrequencyId,
+          selectedIdFlag,
+          setSelectedIdFlag,
+          pageId,
+          setPageId,
+          selectedStepsInfo,
+          setSelectedStepsInfo,
+          currentNextUnselectedPage,
+          setCurrentNextUnselectedPage,
+        }}
+      >
+        <div id="csw">
+          {/* <div className="tw-w-full h-min-64 bg-dark-700 tw-pt-4 tw-pb-8"> */}
+          {/* <div className="tw-w-full h-min-64 bg-dark-700 tw-pt-4 tw-pb-32"></div> */}
+          <div className="tw-w-full h-min-64 bg-dark-700 tw-pt-4 tw-pb-32 min-w-mobile">
+            <div className="tw-block md:tw-hidden tw-flex tw-justify-between tw-w-full tw-px-4">
+              <img
+                onClick={() => handlePageLeft()}
+                alt="Chevron or Arrow Left"
+                className="tw-text-white"
+                src={chevronLeftImgSrc}
+              />
+              <div className="tw-text-white">
+                STEP {pageId} / {lastStepPageId}
+              </div>
+              <img
+                onClick={() => handlePageRight()}
+                alt="Chevron or Arrow Right"
+                className="tw-text-white"
+                src={chevronRightImgSrc}
+              />
             </div>
-            <img
-              onClick={() => handlePageRight()}
-              alt="Chevron or Arrow Right"
-              className="tw-text-white"
-              src={chevronRightImgSrc}
-            />
-          </div>
-          <div className="tw-mb-8">
-            {pageId === 1 && <Texture />}
-            {pageId === 2 && <Roast />}
-            {pageId === 3 && <Quantity />}
-            {pageId === 4 && <Frequency />}
-            {pageId === 5 && <Review />}
-          </div>
-          {pageId !== 5 && (
-            <div className="tw-hidden md:tw-block">
-              <StepsSummary />
+            <div className="tw-mb-8">
+              {pageId === 1 && <Texture />}
+              {pageId === 2 && <Roast />}
+              {pageId === 3 && <Quantity />}
+              {pageId === 4 && <Frequency />}
+              {pageId === 5 && <Review />}
             </div>
-          )}
+            {pageId !== 5 && (
+              <div className="tw-hidden md:tw-block">
+                <StepsSummary />
+              </div>
+            )}
+          </div>
         </div>
-      </div>
-    </UserContext.Provider>
+      </UserContext.Provider>
+    </BrowserRouter>
   )
 }
 
